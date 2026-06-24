@@ -44,7 +44,7 @@ export function AdminLayout({ children }: AdminLayoutProps) {
       <div className="p-6 border-b border-white/10">
         <Link href="/admin" className="flex items-center gap-3">
           <div className="w-9 h-9 bg-brand-600 rounded-xl flex items-center justify-center">
-            <Sparkles className="w-5 h-5 text-white" />
+            <img src="/logo_nisaco.png" alt="Logo" className="w-5 h-5" />
           </div>
           <div>
             <p className="font-serif text-lg font-bold text-white">
