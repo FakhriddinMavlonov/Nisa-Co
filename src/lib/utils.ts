@@ -53,12 +53,13 @@ export function buildWhatsAppMessage(
 
 export type Locale = "en" | "uz" | "no" | "sv" | "es";
 
-export function getLocalizedField<T extends Record<string, unknown>>(
-  obj: T,
+export function getLocalizedField(
+  obj: object,
   field: string,
   locale: Locale
 ): string {
+  const record = obj as Record<string, unknown>;
   const localeSuffix = locale.charAt(0).toUpperCase() + locale.slice(1);
-  const key = `${field}${localeSuffix}` as keyof T;
-  return (obj[key] as string) || (obj[`${field}En`] as string) || "";
+  const key = `${field}${localeSuffix}`;
+  return (record[key] as string) || (record[`${field}En`] as string) || "";
 }
