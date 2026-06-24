@@ -14,8 +14,9 @@ export async function uploadImage(
   filename: string
 ): Promise<string> {
   if (hasBlobToken) {
+    const storeAccess = process.env.BLOB_ACCESS === "private" ? "private" : "public";
     const blob = await put(`products/${filename}`, buffer, {
-      access: "public",
+      access: storeAccess,
     });
     return blob.url;
   }
