@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { uploadImage } from "@/lib/bunny";
+import { uploadImage } from "@/lib/storage";
 import { generateFilename } from "@/lib/utils";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/lib/auth";
@@ -37,8 +37,16 @@ export async function POST(request: NextRequest) {
 
     const buffer = Buffer.from(await file.arrayBuffer());
     const filename = generateFilename(file.name);
-    const url = await uploadImage(buffer, filename);
-    urls.push(url);
+    try {
+      const url = await uploadImage(buffer, filename);
+      urls.push(url);
+    } catch (error) {
+      console.error("Upload failed:", error);
+      return NextResponse.json(
+        { error: error instanceof Error ? error.message : "Upload failed" },
+        { status: 500 }
+      );
+    }
   }
 
   return NextResponse.json({ urls });

@@ -8,11 +8,7 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "*.b-cdn.net",
-      },
-      {
-        protocol: "https",
-        hostname: "storage.bunnycdn.com",
+        hostname: "*.public.blob.vercel-storage.com",
       },
     ],
   },
