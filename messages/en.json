@@ -1,0 +1,132 @@
+{
+  "meta": {
+    "siteName": "Nisa&Co",
+    "siteDescription": "Premium fashion and lifestyle products. Discover our exclusive collection of elegant clothing, accessories and more.",
+    "homeTitle": "Nisa&Co – Premium Fashion & Lifestyle",
+    "productsTitle": "Shop All Products – Nisa&Co",
+    "adminTitle": "Admin Dashboard – Nisa&Co"
+  },
+  "nav": {
+    "home": "Home",
+    "shop": "Shop",
+    "newArrivals": "New Arrivals",
+    "categories": "Categories",
+    "about": "About Us",
+    "contact": "Contact",
+    "cart": "Cart",
+    "search": "Search"
+  },
+  "hero": {
+    "badge": "New Collection 2024",
+    "title": "Elegance Meets",
+    "titleHighlight": "Timeless Style",
+    "subtitle": "Discover our exclusive collection of premium fashion pieces crafted for the modern woman who appreciates quality and sophistication.",
+    "cta": "Shop Now",
+    "ctaSecondary": "View Collection",
+    "scrollDown": "Scroll to explore"
+  },
+  "featured": {
+    "title": "Featured Collection",
+    "subtitle": "Handpicked pieces from our latest collection",
+    "viewAll": "View All Products"
+  },
+  "categories": {
+    "title": "Shop by Category",
+    "subtitle": "Find exactly what you're looking for",
+    "viewAll": "View All"
+  },
+  "product": {
+    "addToCart": "Add to Cart",
+    "buyNow": "Buy via WhatsApp",
+    "selectSize": "Select Size",
+    "size": "Size",
+    "inStock": "In Stock",
+    "outOfStock": "Out of Stock",
+    "description": "Description",
+    "details": "Product Details",
+    "relatedProducts": "You May Also Like",
+    "shareProduct": "Share",
+    "price": "Price",
+    "free_shipping": "Free Shipping",
+    "quantity": "Quantity"
+  },
+  "cart": {
+    "title": "Shopping Cart",
+    "empty": "Your cart is empty",
+    "emptySubtext": "Add some beautiful pieces to get started",
+    "continueShopping": "Continue Shopping",
+    "total": "Total",
+    "subtotal": "Subtotal",
+    "checkout": "Checkout via WhatsApp",
+    "remove": "Remove",
+    "items": "items",
+    "item": "item"
+  },
+  "whatsapp": {
+    "message": "Hello! I would like to order:\n\n{items}\n\nTotal: {total}\n\nPlease confirm availability.",
+    "button": "Order on WhatsApp"
+  },
+  "footer": {
+    "tagline": "Premium fashion for the modern woman",
+    "quickLinks": "Quick Links",
+    "categories": "Categories",
+    "contact": "Contact Us",
+    "followUs": "Follow Us",
+    "newsletter": "Newsletter",
+    "newsletterText": "Subscribe for exclusive offers and new arrivals",
+    "subscribe": "Subscribe",
+    "emailPlaceholder": "Your email address",
+    "rights": "All rights reserved",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  },
+  "admin": {
+    "dashboard": "Dashboard",
+    "products": "Products",
+    "categories": "Categories",
+    "orders": "Orders",
+    "settings": "Settings",
+    "addProduct": "Add Product",
+    "editProduct": "Edit Product",
+    "deleteProduct": "Delete Product",
+    "productName": "Product Name",
+    "productDescription": "Description",
+    "productPrice": "Price",
+    "productCategory": "Category",
+    "productImages": "Images",
+    "productSizes": "Sizes",
+    "addSize": "Add Size",
+    "removeSize": "Remove",
+    "uploadImages": "Upload Images",
+    "dragAndDrop": "Drag & drop images here, or click to browse",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "confirmDelete": "Are you sure you want to delete this product?",
+    "featured": "Featured",
+    "inStock": "In Stock",
+    "login": "Login",
+    "logout": "Logout",
+    "email": "Email",
+    "password": "Password",
+    "loginButton": "Sign In",
+    "totalProducts": "Total Products",
+    "totalCategories": "Total Categories",
+    "recentProducts": "Recent Products"
+  },
+  "search": {
+    "placeholder": "Search products...",
+    "noResults": "No products found for",
+    "results": "results for"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "tryAgain": "Try Again",
+    "backToHome": "Back to Home",
+    "viewDetails": "View Details",
+    "new": "New",
+    "sale": "Sale",
+    "soldOut": "Sold Out"
+  }
+}

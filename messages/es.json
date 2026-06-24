@@ -1,0 +1,132 @@
+{
+  "meta": {
+    "siteName": "Nisa&Co",
+    "siteDescription": "Productos premium de moda y estilo de vida. Descubre nuestra colección exclusiva de ropa elegante, accesorios y más.",
+    "homeTitle": "Nisa&Co – Moda Premium y Estilo de Vida",
+    "productsTitle": "Comprar Todos los Productos – Nisa&Co",
+    "adminTitle": "Panel de Administración – Nisa&Co"
+  },
+  "nav": {
+    "home": "Inicio",
+    "shop": "Tienda",
+    "newArrivals": "Novedades",
+    "categories": "Categorías",
+    "about": "Sobre Nosotros",
+    "contact": "Contacto",
+    "cart": "Carrito",
+    "search": "Buscar"
+  },
+  "hero": {
+    "badge": "Nueva Colección 2024",
+    "title": "La Elegancia Se Encuentra con",
+    "titleHighlight": "El Estilo Atemporal",
+    "subtitle": "Descubre nuestra colección exclusiva de prendas de moda premium diseñadas para la mujer moderna que aprecia la calidad y la sofisticación.",
+    "cta": "Comprar Ahora",
+    "ctaSecondary": "Ver Colección",
+    "scrollDown": "Desplázate para explorar"
+  },
+  "featured": {
+    "title": "Colección Destacada",
+    "subtitle": "Piezas seleccionadas a mano de nuestra última colección",
+    "viewAll": "Ver Todos los Productos"
+  },
+  "categories": {
+    "title": "Comprar por Categoría",
+    "subtitle": "Encuentra exactamente lo que buscas",
+    "viewAll": "Ver Todo"
+  },
+  "product": {
+    "addToCart": "Añadir al Carrito",
+    "buyNow": "Comprar por WhatsApp",
+    "selectSize": "Seleccionar Talla",
+    "size": "Talla",
+    "inStock": "En Stock",
+    "outOfStock": "Agotado",
+    "description": "Descripción",
+    "details": "Detalles del Producto",
+    "relatedProducts": "También Te Puede Gustar",
+    "shareProduct": "Compartir",
+    "price": "Precio",
+    "free_shipping": "Envío Gratis",
+    "quantity": "Cantidad"
+  },
+  "cart": {
+    "title": "Carrito de Compras",
+    "empty": "Tu carrito está vacío",
+    "emptySubtext": "Añade algunas piezas hermosas para empezar",
+    "continueShopping": "Continuar Comprando",
+    "total": "Total",
+    "subtotal": "Subtotal",
+    "checkout": "Pagar por WhatsApp",
+    "remove": "Eliminar",
+    "items": "artículos",
+    "item": "artículo"
+  },
+  "whatsapp": {
+    "message": "¡Hola! Me gustaría pedir:\n\n{items}\n\nTotal: {total}\n\nPor favor confirma la disponibilidad.",
+    "button": "Pedir en WhatsApp"
+  },
+  "footer": {
+    "tagline": "Moda premium para la mujer moderna",
+    "quickLinks": "Enlaces Rápidos",
+    "categories": "Categorías",
+    "contact": "Contáctenos",
+    "followUs": "Síguenos",
+    "newsletter": "Boletín",
+    "newsletterText": "Suscríbete para ofertas exclusivas y novedades",
+    "subscribe": "Suscribirse",
+    "emailPlaceholder": "Tu dirección de correo",
+    "rights": "Todos los derechos reservados",
+    "privacy": "Política de Privacidad",
+    "terms": "Términos de Servicio"
+  },
+  "admin": {
+    "dashboard": "Panel de Control",
+    "products": "Productos",
+    "categories": "Categorías",
+    "orders": "Pedidos",
+    "settings": "Configuración",
+    "addProduct": "Añadir Producto",
+    "editProduct": "Editar Producto",
+    "deleteProduct": "Eliminar Producto",
+    "productName": "Nombre del Producto",
+    "productDescription": "Descripción",
+    "productPrice": "Precio",
+    "productCategory": "Categoría",
+    "productImages": "Imágenes",
+    "productSizes": "Tallas",
+    "addSize": "Añadir Talla",
+    "removeSize": "Eliminar",
+    "uploadImages": "Subir Imágenes",
+    "dragAndDrop": "Arrastra y suelta imágenes aquí, o haz clic para explorar",
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "delete": "Eliminar",
+    "confirmDelete": "¿Estás seguro de que quieres eliminar este producto?",
+    "featured": "Destacado",
+    "inStock": "En Stock",
+    "login": "Iniciar Sesión",
+    "logout": "Cerrar Sesión",
+    "email": "Correo Electrónico",
+    "password": "Contraseña",
+    "loginButton": "Iniciar Sesión",
+    "totalProducts": "Total de Productos",
+    "totalCategories": "Total de Categorías",
+    "recentProducts": "Productos Recientes"
+  },
+  "search": {
+    "placeholder": "Buscar productos...",
+    "noResults": "No se encontraron productos para",
+    "results": "resultados para"
+  },
+  "common": {
+    "loading": "Cargando...",
+    "error": "Algo salió mal",
+    "tryAgain": "Intentar de Nuevo",
+    "backToHome": "Volver al Inicio",
+    "viewDetails": "Ver Detalles",
+    "new": "Nuevo",
+    "sale": "Oferta",
+    "soldOut": "Agotado"
+  }
+}

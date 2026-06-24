@@ -1,0 +1,132 @@
+{
+  "meta": {
+    "siteName": "Nisa&Co",
+    "siteDescription": "Premium moda va hayot tarzi mahsulotlari. Eksklyuziv elegant kiyim, aksessuarlar va boshqalarni kashf eting.",
+    "homeTitle": "Nisa&Co – Premium Moda va Hayot Tarzi",
+    "productsTitle": "Barcha Mahsulotlar – Nisa&Co",
+    "adminTitle": "Admin Paneli – Nisa&Co"
+  },
+  "nav": {
+    "home": "Bosh sahifa",
+    "shop": "Do'kon",
+    "newArrivals": "Yangi kelganlar",
+    "categories": "Kategoriyalar",
+    "about": "Biz haqimizda",
+    "contact": "Aloqa",
+    "cart": "Savat",
+    "search": "Qidirish"
+  },
+  "hero": {
+    "badge": "Yangi Kolleksiya 2024",
+    "title": "Nafosatlilik va",
+    "titleHighlight": "Abadiy Uslub",
+    "subtitle": "Sifat va nafosatni qadrlaydigan zamonaviy ayol uchun yaratilgan premium moda buyumlarining eksklyuziv kolleksiyasini kashf eting.",
+    "cta": "Xarid Qilish",
+    "ctaSecondary": "Kolleksiyani Ko'rish",
+    "scrollDown": "O'rganish uchun aylantiring"
+  },
+  "featured": {
+    "title": "Tanlangan Kolleksiya",
+    "subtitle": "So'nggi kolleksiyamizdan qo'lda tanlangan buyumlar",
+    "viewAll": "Barcha Mahsulotlarni Ko'rish"
+  },
+  "categories": {
+    "title": "Kategoriya bo'yicha Xarid Qiling",
+    "subtitle": "Izlayotganingizni aynan toping",
+    "viewAll": "Barchasini Ko'rish"
+  },
+  "product": {
+    "addToCart": "Savatga Qo'shish",
+    "buyNow": "WhatsApp orqali Sotib Olish",
+    "selectSize": "O'lchamni Tanlang",
+    "size": "O'lcham",
+    "inStock": "Mavjud",
+    "outOfStock": "Mavjud Emas",
+    "description": "Tavsif",
+    "details": "Mahsulot Tafsilotlari",
+    "relatedProducts": "Sizga Yoqishi Mumkin",
+    "shareProduct": "Ulashish",
+    "price": "Narx",
+    "free_shipping": "Bepul Yetkazib Berish",
+    "quantity": "Miqdor"
+  },
+  "cart": {
+    "title": "Xarid Savati",
+    "empty": "Savatingiz bo'sh",
+    "emptySubtext": "Boshlash uchun bir nechta chiroyli buyum qo'shing",
+    "continueShopping": "Xarid Qilishni Davom Ettirish",
+    "total": "Jami",
+    "subtotal": "Oraliq Jami",
+    "checkout": "WhatsApp orqali To'lash",
+    "remove": "O'chirish",
+    "items": "mahsulot",
+    "item": "mahsulot"
+  },
+  "whatsapp": {
+    "message": "Salom! Men buyurtma bermoqchiman:\n\n{items}\n\nJami: {total}\n\nIltimos, mavjudligini tasdiqlang.",
+    "button": "WhatsApp da Buyurtma Berish"
+  },
+  "footer": {
+    "tagline": "Zamonaviy ayol uchun premium moda",
+    "quickLinks": "Tezkor Havolalar",
+    "categories": "Kategoriyalar",
+    "contact": "Biz bilan Bog'laning",
+    "followUs": "Bizni Kuzating",
+    "newsletter": "Yangiliklar",
+    "newsletterText": "Eksklyuziv takliflar va yangi kelganlar uchun obuna bo'ling",
+    "subscribe": "Obuna Bo'lish",
+    "emailPlaceholder": "Email manzilingiz",
+    "rights": "Barcha huquqlar himoyalangan",
+    "privacy": "Maxfiylik Siyosati",
+    "terms": "Foydalanish Shartlari"
+  },
+  "admin": {
+    "dashboard": "Boshqaruv Paneli",
+    "products": "Mahsulotlar",
+    "categories": "Kategoriyalar",
+    "orders": "Buyurtmalar",
+    "settings": "Sozlamalar",
+    "addProduct": "Mahsulot Qo'shish",
+    "editProduct": "Mahsulotni Tahrirlash",
+    "deleteProduct": "Mahsulotni O'chirish",
+    "productName": "Mahsulot Nomi",
+    "productDescription": "Tavsif",
+    "productPrice": "Narx",
+    "productCategory": "Kategoriya",
+    "productImages": "Rasmlar",
+    "productSizes": "O'lchamlar",
+    "addSize": "O'lcham Qo'shish",
+    "removeSize": "O'chirish",
+    "uploadImages": "Rasmlarni Yuklash",
+    "dragAndDrop": "Rasmlarni bu yerga tashlang yoki ko'rish uchun bosing",
+    "save": "Saqlash",
+    "cancel": "Bekor Qilish",
+    "delete": "O'chirish",
+    "confirmDelete": "Bu mahsulotni o'chirishga ishonchingiz komilmi?",
+    "featured": "Tanlangan",
+    "inStock": "Mavjud",
+    "login": "Kirish",
+    "logout": "Chiqish",
+    "email": "Email",
+    "password": "Parol",
+    "loginButton": "Tizimga Kirish",
+    "totalProducts": "Jami Mahsulotlar",
+    "totalCategories": "Jami Kategoriyalar",
+    "recentProducts": "So'nggi Mahsulotlar"
+  },
+  "search": {
+    "placeholder": "Mahsulotlarni qidiring...",
+    "noResults": "Uchun mahsulot topilmadi",
+    "results": "uchun natijalar"
+  },
+  "common": {
+    "loading": "Yuklanmoqda...",
+    "error": "Xatolik yuz berdi",
+    "tryAgain": "Qayta Urinish",
+    "backToHome": "Bosh Sahifaga Qaytish",
+    "viewDetails": "Batafsil Ko'rish",
+    "new": "Yangi",
+    "sale": "Chegirma",
+    "soldOut": "Sotildi"
+  }
+}

@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build output
+.next/
+out/
+dist/
+
+# Environment
+# .env
+# .env.local
+# .env.*.local
+
+# Database
+# *.db
+# *.db-journal
+# prisma/*.db
+
+# Uploads (local)
+public/uploads/
+
+# Misc
+.DS_Store
+Thumbs.db
+*.log
+.vercel

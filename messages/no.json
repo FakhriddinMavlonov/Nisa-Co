@@ -1,0 +1,132 @@
+{
+  "meta": {
+    "siteName": "Nisa&Co",
+    "siteDescription": "Premium mote og livsstilsprodukter. Oppdag vår eksklusive samling av elegante klær, tilbehør og mer.",
+    "homeTitle": "Nisa&Co – Premium Mote og Livsstil",
+    "productsTitle": "Handle Alle Produkter – Nisa&Co",
+    "adminTitle": "Admin Dashbord – Nisa&Co"
+  },
+  "nav": {
+    "home": "Hjem",
+    "shop": "Butikk",
+    "newArrivals": "Nyheter",
+    "categories": "Kategorier",
+    "about": "Om Oss",
+    "contact": "Kontakt",
+    "cart": "Handlekurv",
+    "search": "Søk"
+  },
+  "hero": {
+    "badge": "Ny Kolleksjon 2024",
+    "title": "Eleganse Møter",
+    "titleHighlight": "Tidløs Stil",
+    "subtitle": "Oppdag vår eksklusive samling av premium motefragmenter laget for den moderne kvinnen som setter pris på kvalitet og sofistikering.",
+    "cta": "Handle Nå",
+    "ctaSecondary": "Se Kolleksjon",
+    "scrollDown": "Bla for å utforske"
+  },
+  "featured": {
+    "title": "Utvalgt Kolleksjon",
+    "subtitle": "Håndplukkede stykker fra vår siste kolleksjon",
+    "viewAll": "Se Alle Produkter"
+  },
+  "categories": {
+    "title": "Handle etter Kategori",
+    "subtitle": "Finn nøyaktig det du leter etter",
+    "viewAll": "Se Alle"
+  },
+  "product": {
+    "addToCart": "Legg i Handlekurv",
+    "buyNow": "Kjøp via WhatsApp",
+    "selectSize": "Velg Størrelse",
+    "size": "Størrelse",
+    "inStock": "På Lager",
+    "outOfStock": "Utsolgt",
+    "description": "Beskrivelse",
+    "details": "Produktdetaljer",
+    "relatedProducts": "Du Kan Også Like",
+    "shareProduct": "Del",
+    "price": "Pris",
+    "free_shipping": "Gratis Frakt",
+    "quantity": "Antall"
+  },
+  "cart": {
+    "title": "Handlekurv",
+    "empty": "Handlekurven er tom",
+    "emptySubtext": "Legg til noen vakre stykker for å komme i gang",
+    "continueShopping": "Fortsett å Handle",
+    "total": "Totalt",
+    "subtotal": "Delsum",
+    "checkout": "Betal via WhatsApp",
+    "remove": "Fjern",
+    "items": "varer",
+    "item": "vare"
+  },
+  "whatsapp": {
+    "message": "Hei! Jeg ønsker å bestille:\n\n{items}\n\nTotalt: {total}\n\nVennligst bekreft tilgjengelighet.",
+    "button": "Bestill på WhatsApp"
+  },
+  "footer": {
+    "tagline": "Premium mote for den moderne kvinnen",
+    "quickLinks": "Hurtiglenker",
+    "categories": "Kategorier",
+    "contact": "Kontakt Oss",
+    "followUs": "Følg Oss",
+    "newsletter": "Nyhetsbrev",
+    "newsletterText": "Abonner for eksklusive tilbud og nyheter",
+    "subscribe": "Abonner",
+    "emailPlaceholder": "Din e-postadresse",
+    "rights": "Alle rettigheter forbeholdt",
+    "privacy": "Personvernerklæring",
+    "terms": "Vilkår for bruk"
+  },
+  "admin": {
+    "dashboard": "Dashbord",
+    "products": "Produkter",
+    "categories": "Kategorier",
+    "orders": "Bestillinger",
+    "settings": "Innstillinger",
+    "addProduct": "Legg til Produkt",
+    "editProduct": "Rediger Produkt",
+    "deleteProduct": "Slett Produkt",
+    "productName": "Produktnavn",
+    "productDescription": "Beskrivelse",
+    "productPrice": "Pris",
+    "productCategory": "Kategori",
+    "productImages": "Bilder",
+    "productSizes": "Størrelser",
+    "addSize": "Legg til Størrelse",
+    "removeSize": "Fjern",
+    "uploadImages": "Last opp Bilder",
+    "dragAndDrop": "Dra og slipp bilder her, eller klikk for å bla",
+    "save": "Lagre",
+    "cancel": "Avbryt",
+    "delete": "Slett",
+    "confirmDelete": "Er du sikker på at du vil slette dette produktet?",
+    "featured": "Utvalgt",
+    "inStock": "På Lager",
+    "login": "Logg Inn",
+    "logout": "Logg Ut",
+    "email": "E-post",
+    "password": "Passord",
+    "loginButton": "Logg Inn",
+    "totalProducts": "Totale Produkter",
+    "totalCategories": "Totale Kategorier",
+    "recentProducts": "Nylige Produkter"
+  },
+  "search": {
+    "placeholder": "Søk etter produkter...",
+    "noResults": "Ingen produkter funnet for",
+    "results": "resultater for"
+  },
+  "common": {
+    "loading": "Laster...",
+    "error": "Noe gikk galt",
+    "tryAgain": "Prøv Igjen",
+    "backToHome": "Tilbake til Hjem",
+    "viewDetails": "Se Detaljer",
+    "new": "Ny",
+    "sale": "Salg",
+    "soldOut": "Utsolgt"
+  }
+}

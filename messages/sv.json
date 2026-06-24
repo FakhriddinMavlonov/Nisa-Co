@@ -1,0 +1,132 @@
+{
+  "meta": {
+    "siteName": "Nisa&Co",
+    "siteDescription": "Premium mode och livsstilsprodukter. Upptäck vår exklusiva kollektion av eleganta kläder, accessoarer och mer.",
+    "homeTitle": "Nisa&Co – Premium Mode och Livsstil",
+    "productsTitle": "Handla Alla Produkter – Nisa&Co",
+    "adminTitle": "Adminkontrollpanel – Nisa&Co"
+  },
+  "nav": {
+    "home": "Hem",
+    "shop": "Butik",
+    "newArrivals": "Nyheter",
+    "categories": "Kategorier",
+    "about": "Om Oss",
+    "contact": "Kontakt",
+    "cart": "Varukorg",
+    "search": "Sök"
+  },
+  "hero": {
+    "badge": "Ny Kollektion 2024",
+    "title": "Elegans Möter",
+    "titleHighlight": "Tidlös Stil",
+    "subtitle": "Upptäck vår exklusiva kollektion av premiummodestycker skapade för den moderna kvinnan som uppskattar kvalitet och sofistikering.",
+    "cta": "Handla Nu",
+    "ctaSecondary": "Se Kollektion",
+    "scrollDown": "Scrolla för att utforska"
+  },
+  "featured": {
+    "title": "Utvald Kollektion",
+    "subtitle": "Handplockade stycken från vår senaste kollektion",
+    "viewAll": "Se Alla Produkter"
+  },
+  "categories": {
+    "title": "Handla efter Kategori",
+    "subtitle": "Hitta exakt vad du letar efter",
+    "viewAll": "Se Alla"
+  },
+  "product": {
+    "addToCart": "Lägg i Varukorg",
+    "buyNow": "Köp via WhatsApp",
+    "selectSize": "Välj Storlek",
+    "size": "Storlek",
+    "inStock": "I Lager",
+    "outOfStock": "Slutsåld",
+    "description": "Beskrivning",
+    "details": "Produktdetaljer",
+    "relatedProducts": "Du Kanske Också Gillar",
+    "shareProduct": "Dela",
+    "price": "Pris",
+    "free_shipping": "Gratis Frakt",
+    "quantity": "Antal"
+  },
+  "cart": {
+    "title": "Varukorg",
+    "empty": "Din varukorg är tom",
+    "emptySubtext": "Lägg till några vackra stycken för att komma igång",
+    "continueShopping": "Fortsätt Handla",
+    "total": "Totalt",
+    "subtotal": "Delsumma",
+    "checkout": "Betala via WhatsApp",
+    "remove": "Ta bort",
+    "items": "varor",
+    "item": "vara"
+  },
+  "whatsapp": {
+    "message": "Hej! Jag vill beställa:\n\n{items}\n\nTotalt: {total}\n\nVänligen bekräfta tillgänglighet.",
+    "button": "Beställ på WhatsApp"
+  },
+  "footer": {
+    "tagline": "Premium mode för den moderna kvinnan",
+    "quickLinks": "Snabblänkar",
+    "categories": "Kategorier",
+    "contact": "Kontakta Oss",
+    "followUs": "Följ Oss",
+    "newsletter": "Nyhetsbrev",
+    "newsletterText": "Prenumerera för exklusiva erbjudanden och nyheter",
+    "subscribe": "Prenumerera",
+    "emailPlaceholder": "Din e-postadress",
+    "rights": "Alla rättigheter förbehållna",
+    "privacy": "Integritetspolicy",
+    "terms": "Användarvillkor"
+  },
+  "admin": {
+    "dashboard": "Kontrollpanel",
+    "products": "Produkter",
+    "categories": "Kategorier",
+    "orders": "Beställningar",
+    "settings": "Inställningar",
+    "addProduct": "Lägg till Produkt",
+    "editProduct": "Redigera Produkt",
+    "deleteProduct": "Ta bort Produkt",
+    "productName": "Produktnamn",
+    "productDescription": "Beskrivning",
+    "productPrice": "Pris",
+    "productCategory": "Kategori",
+    "productImages": "Bilder",
+    "productSizes": "Storlekar",
+    "addSize": "Lägg till Storlek",
+    "removeSize": "Ta bort",
+    "uploadImages": "Ladda upp Bilder",
+    "dragAndDrop": "Dra och släpp bilder här, eller klicka för att bläddra",
+    "save": "Spara",
+    "cancel": "Avbryt",
+    "delete": "Ta bort",
+    "confirmDelete": "Är du säker på att du vill ta bort den här produkten?",
+    "featured": "Utvald",
+    "inStock": "I Lager",
+    "login": "Logga In",
+    "logout": "Logga Ut",
+    "email": "E-post",
+    "password": "Lösenord",
+    "loginButton": "Logga In",
+    "totalProducts": "Totala Produkter",
+    "totalCategories": "Totala Kategorier",
+    "recentProducts": "Senaste Produkter"
+  },
+  "search": {
+    "placeholder": "Sök efter produkter...",
+    "noResults": "Inga produkter hittades för",
+    "results": "resultat för"
+  },
+  "common": {
+    "loading": "Laddar...",
+    "error": "Något gick fel",
+    "tryAgain": "Försök igen",
+    "backToHome": "Tillbaka till Hem",
+    "viewDetails": "Se Detaljer",
+    "new": "Ny",
+    "sale": "Rea",
+    "soldOut": "Slutsåld"
+  }
+}
