@@ -24,7 +24,7 @@ async function uploadToBunny(buffer: Buffer, filename: string): Promise<string> 
       AccessKey: BUNNY_API_KEY!,
       "Content-Type": "application/octet-stream",
     },
-    body: buffer,
+    body: buffer as unknown as BodyInit,
   });
 
   if (!response.ok) {
