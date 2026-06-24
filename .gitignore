@@ -9,14 +9,14 @@ out/
 dist/
 
 # Environment
-# .env
-# .env.local
-# .env.*.local
+.env
+.env.local
+.env.*.local
 
 # Database
-# *.db
-# *.db-journal
-# prisma/*.db
+*.db
+*.db-journal
+prisma/*.db
 
 # Uploads (local)
 public/uploads/
