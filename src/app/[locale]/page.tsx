@@ -45,23 +45,31 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 async function getFeaturedProducts() {
-  return prisma.product.findMany({
-    where: { featured: true, inStock: true },
-    include: {
-      category: true,
-      images: { orderBy: { order: "asc" } },
-      sizes: true,
-    },
-    orderBy: { createdAt: "desc" },
-    take: 8,
-  });
+  try {
+    return await prisma.product.findMany({
+      where: { featured: true, inStock: true },
+      include: {
+        category: true,
+        images: { orderBy: { order: "asc" } },
+        sizes: true,
+      },
+      orderBy: { createdAt: "desc" },
+      take: 8,
+    });
+  } catch {
+    return [];
+  }
 }
 
 async function getCategories() {
-  return prisma.category.findMany({
-    include: { _count: { select: { products: true } } },
-    take: 6,
-  });
+  try {
+    return await prisma.category.findMany({
+      include: { _count: { select: { products: true } } },
+      take: 6,
+    });
+  } catch {
+    return [];
+  }
 }
 
 export default async function HomePage({ params }: Props) {

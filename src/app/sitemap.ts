@@ -5,10 +5,16 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
 const LOCALES = ["en", "uz", "no", "sv", "es"];
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const products = await prisma.product.findMany({
-    select: { slug: true, updatedAt: true },
-    where: { inStock: true },
-  });
+  let products: { slug: string; updatedAt: Date }[] = [];
+  try {
+    products = await prisma.product.findMany({
+      select: { slug: true, updatedAt: true },
+      where: { inStock: true },
+    });
+  } catch {
+    // Database may be empty or unreachable during build — skip product URLs
+    products = [];
+  }
 
   const staticPages: MetadataRoute.Sitemap = LOCALES.flatMap((locale) => [
     {
