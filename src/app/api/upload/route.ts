@@ -41,11 +41,9 @@ export async function POST(request: NextRequest) {
       const url = await uploadImage(buffer, filename);
       urls.push(url);
     } catch (error) {
-      console.error("Upload failed:", error);
-      return NextResponse.json(
-        { error: error instanceof Error ? error.message : "Upload failed" },
-        { status: 500 }
-      );
+      const msg = error instanceof Error ? error.message : String(error);
+      console.error("Upload failed:", msg, "| BLOB_TOKEN set:", !!process.env.BLOB_READ_WRITE_TOKEN);
+      return NextResponse.json({ error: msg }, { status: 500 });
     }
   }
 

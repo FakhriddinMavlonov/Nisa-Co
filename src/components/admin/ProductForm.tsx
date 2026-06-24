@@ -113,6 +113,12 @@ export function ProductForm({ product, categories }: ProductFormProps) {
       const res = await fetch("/api/upload", { method: "POST", body: formData });
       const data = await res.json();
 
+      if (!res.ok) {
+        console.error("Upload server error:", data?.error ?? res.status);
+        alert("Upload xatoligi: " + (data?.error ?? "Server error " + res.status));
+        return;
+      }
+
       if (data.urls) {
         const newImages: ProductImage[] = data.urls.map((url: string) => ({ url, alt: nameEn }));
         setImages((prev) => [...prev, ...newImages]);
