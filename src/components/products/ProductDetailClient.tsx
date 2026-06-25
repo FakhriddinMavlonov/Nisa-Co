@@ -47,7 +47,7 @@ export function ProductDetailClient({ product, relatedProducts, locale }: Produc
       product.price,
       product.currency
     );
-    const url = buildWhatsAppUrl("+998976125860", message);
+    const url = buildWhatsAppUrl("+447775777313", message);
     window.open(url, "_blank");
   };
 

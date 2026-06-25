@@ -38,7 +38,7 @@ export function BannerSection() {
             </p>
 
             <motion.a
-              href="https://wa.me/998976125860"
+              href="https://wa.me/447775777313"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05, y: -2 }}

@@ -17,7 +17,7 @@ export function AdminSettingsClient({ adminEmail }: AdminSettingsClientProps) {
           <div>
             <label className="block text-sm font-medium text-gray-300 mb-1.5">{t("whatsappNumber")}</label>
             <input
-              defaultValue="+998976125860"
+              defaultValue="+447775777313"
               readOnly
               className="w-full px-4 py-3 bg-gray-800 border border-white/10 rounded-xl text-white text-sm opacity-50 cursor-not-allowed"
             />

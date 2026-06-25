@@ -28,7 +28,7 @@ export function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
     }));
 
     const message = buildWhatsAppMessage(waItems, total, "GBP");
-    const phone = process.env.NEXT_PUBLIC_WHATSAPP || "+998976125860";
+    const phone = process.env.NEXT_PUBLIC_WHATSAPP || "+447775777313";
     const url = buildWhatsAppUrl(phone, message);
     window.open(url, "_blank");
   };
