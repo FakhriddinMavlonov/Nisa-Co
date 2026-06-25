@@ -31,10 +31,10 @@ export function BannerSection() {
             </motion.div>
 
             <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-              Ready to Order?
+              {t("readyTitle")}
             </h2>
             <p className="text-brand-100 text-lg mb-8 max-w-2xl mx-auto">
-              Connect with us directly on WhatsApp for a personal shopping experience, custom orders, and exclusive deals.
+              {t("readyDesc")}
             </p>
 
             <motion.a

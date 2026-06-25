@@ -23,7 +23,10 @@
     "subtitle": "Oppdag vår eksklusive samling av premium motefragmenter laget for den moderne kvinnen som setter pris på kvalitet og sofistikering.",
     "cta": "Handle Nå",
     "ctaSecondary": "Se Kolleksjon",
-    "scrollDown": "Bla for å utforske"
+    "scrollDown": "Bla for å utforske",
+    "statsProducts": "Produkter",
+    "statsBrands": "Merker",
+    "statsRated": "Vurdert"
   },
   "featured": {
     "title": "Utvalgt Kolleksjon",
@@ -33,7 +36,8 @@
   "categories": {
     "title": "Handle etter Kategori",
     "subtitle": "Finn nøyaktig det du leter etter",
-    "viewAll": "Se Alle"
+    "viewAll": "Se Alle",
+    "items": "varer"
   },
   "product": {
     "addToCart": "Legg i Handlekurv",
@@ -48,7 +52,11 @@
     "shareProduct": "Del",
     "price": "Pris",
     "free_shipping": "Gratis Frakt",
-    "quantity": "Antall"
+    "quantity": "Antall",
+    "added": "Lagt til!",
+    "easyReturns": "Enkel Retur",
+    "securePayment": "Sikker Betaling",
+    "premiumQuality": "Premiumkvalitet"
   },
   "cart": {
     "title": "Handlekurv",
@@ -64,7 +72,9 @@
   },
   "whatsapp": {
     "message": "Hei! Jeg ønsker å bestille:\n\n{items}\n\nTotalt: {total}\n\nVennligst bekreft tilgjengelighet.",
-    "button": "Bestill på WhatsApp"
+    "button": "Bestill på WhatsApp",
+    "readyTitle": "Klar til å Bestille?",
+    "readyDesc": "Kontakt oss direkte på WhatsApp for en personlig handleopplevelse, tilpassede bestillinger og eksklusive tilbud."
   },
   "footer": {
     "tagline": "Premium mote for den moderne kvinnen",
@@ -78,7 +88,13 @@
     "emailPlaceholder": "Din e-postadresse",
     "rights": "Alle rettigheter forbeholdt",
     "privacy": "Personvernerklæring",
-    "terms": "Vilkår for bruk"
+    "terms": "Vilkår for bruk",
+    "madeWith": "Laget med"
+  },
+  "notFound": {
+    "title": "Siden Ble Ikke Funnet",
+    "description": "Siden du leter etter eksisterer ikke.",
+    "backHome": "Tilbake til Hjem"
   },
   "admin": {
     "dashboard": "Dashbord",
@@ -112,12 +128,91 @@
     "loginButton": "Logg Inn",
     "totalProducts": "Totale Produkter",
     "totalCategories": "Totale Kategorier",
-    "recentProducts": "Nylige Produkter"
+    "recentProducts": "Nylige Produkter",
+    "adminPanel": "Adminpanel",
+    "signOut": "Logg ut",
+    "welcomeBack": "Velkommen tilbake, Admin",
+    "addNewProduct": "Legg til Nytt Produkt",
+    "uploadSubtitle": "Last opp med bilder og størrelser",
+    "manageCategories": "Administrer Kategorier",
+    "organizeProducts": "Organiser produktene dine",
+    "noProductsYet": "Ingen produkter ennå",
+    "addFirstProduct": "Legg til ditt første produkt →",
+    "viewAll": "Se alle",
+    "searchProducts": "Søk etter produkter...",
+    "noProductsFound": "Ingen produkter funnet",
+    "addCategory": "Legg til Kategori",
+    "newCategory": "Ny Kategori",
+    "create": "Opprett",
+    "noCategoriesYet": "Ingen kategorier ennå",
+    "createFirstCategory": "Opprett din første kategori →",
+    "deleteCategoryConfirm": "Slett denne kategorien? Produkter i den vil bli ukategoriserte.",
+    "invalidCredentials": "Ugyldig legitimasjon. Vennligst prøv igjen.",
+    "signingIn": "Logger inn...",
+    "adminDashboard": "Admindashbord",
+    "secureAccess": "Adminpanel · Kun sikker tilgang",
+    "whatsappNumber": "WhatsApp-nummer",
+    "configureInEnv": "Konfigurer i .env.local-filen",
+    "adminEmail": "Admin E-post",
+    "productCount": "{count} produkter totalt",
+    "categoriesCount": "{count} kategorier",
+    "noSizes": "Ingen størrelser",
+    "colProduct": "Produkt",
+    "colCategory": "Kategori",
+    "colPrice": "Pris",
+    "colStatus": "Status",
+    "colActions": "Handlinger",
+    "outOfStock": "Utsolgt",
+    "optional": "Valgfritt",
+    "fillDetails": "Fyll inn produktdetaljer",
+    "tabBasicInfo": "Grunnleggende Info",
+    "tabLanguages": "Språk",
+    "tabImages": "Bilder",
+    "tabSizes": "Størrelser",
+    "tabSeo": "SEO",
+    "dropImages": "Slipp bilder her",
+    "imageFormats": "PNG, JPG, WebP opptil 10MB hver",
+    "browseFiles": "Bla gjennom Filer",
+    "uploading": "Laster opp...",
+    "mainImage": "Hoved",
+    "addSizeHint": "Legg til tilgjengelige størrelser og lagerbeholdning.",
+    "sizePlaceholder": "Størrelse (f.eks. S, M, L, XL, UK8)",
+    "quickAdd": "Hurtigtillegg:",
+    "seoHint": "Optimaliser for søkemotorer. Disse overstyrer standard produktnavn/beskrivelse.",
+    "seoTitleLabel": "SEO-tittel (Engelsk)",
+    "seoDescLabel": "SEO-beskrivelse (Engelsk)",
+    "googlePreview": "Google Forhåndsvisning",
+    "noDescription": "Ingen beskrivelse gitt.",
+    "saving": "Lagrer...",
+    "updateProduct": "Oppdater Produkt",
+    "createProduct": "Opprett Produkt",
+    "failedToSave": "Kunne ikke lagre",
+    "noCategoriesLink": "Ingen kategorier ennå.",
+    "createOneFirst": "Opprett én først.",
+    "selectCategory": "Velg en kategori...",
+    "uploadError": "Opplastingsfeil: ",
+    "productNameEn": "Produktnavn (Engelsk)",
+    "descriptionEn": "Beskrivelse (Engelsk)",
+    "editingProduct": "Redigerer: {name}",
+    "ifEmptyFallback": "Hvis tom, brukes den engelske versjonen som reserve.",
+    "seoCharsOf60": "{count}/60 tegn",
+    "seoCharsOf160": "{count}/160 tegn"
   },
   "search": {
     "placeholder": "Søk etter produkter...",
     "noResults": "Ingen produkter funnet for",
     "results": "resultater for"
+  },
+  "shop": {
+    "title": "Butikk",
+    "productSingular": "produkt",
+    "productPlural": "produkter",
+    "filters": "Filtre",
+    "sortNewest": "Nyeste",
+    "sortPriceLow": "Pris: Lav til høy",
+    "sortPriceHigh": "Pris: Høy til lav",
+    "all": "Alle",
+    "categoriesLabel": "Kategorier"
   },
   "common": {
     "loading": "Laster...",

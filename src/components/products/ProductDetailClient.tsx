@@ -227,7 +227,7 @@ export function ProductDetailClient({ product, relatedProducts, locale }: Produc
                 )}
               >
                 <ShoppingBag className="w-4 h-4" />
-                {addedToCart ? "Added!" : t("addToCart")}
+                {addedToCart ? t("added") : t("addToCart")}
               </button>
 
               <button
@@ -250,10 +250,10 @@ export function ProductDetailClient({ product, relatedProducts, locale }: Produc
             {/* Features */}
             <div className="border-t border-gray-100 pt-6 grid grid-cols-2 gap-3">
               {[
-                { icon: "🚚", label: "Free Shipping" },
-                { icon: "↩️", label: "Easy Returns" },
-                { icon: "🔒", label: "Secure Payment" },
-                { icon: "✨", label: "Premium Quality" },
+                { icon: "🚚", label: t("free_shipping") },
+                { icon: "↩️", label: t("easyReturns") },
+                { icon: "🔒", label: t("securePayment") },
+                { icon: "✨", label: t("premiumQuality") },
               ].map((feat) => (
                 <div key={feat.label} className="flex items-center gap-2 text-sm text-gray-600">
                   <span>{feat.icon}</span>

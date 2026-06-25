@@ -23,7 +23,10 @@
     "subtitle": "Discover our exclusive collection of premium fashion pieces crafted for the modern woman who appreciates quality and sophistication.",
     "cta": "Shop Now",
     "ctaSecondary": "View Collection",
-    "scrollDown": "Scroll to explore"
+    "scrollDown": "Scroll to explore",
+    "statsProducts": "Products",
+    "statsBrands": "Brands",
+    "statsRated": "Rated"
   },
   "featured": {
     "title": "Featured Collection",
@@ -33,7 +36,8 @@
   "categories": {
     "title": "Shop by Category",
     "subtitle": "Find exactly what you're looking for",
-    "viewAll": "View All"
+    "viewAll": "View All",
+    "items": "items"
   },
   "product": {
     "addToCart": "Add to Cart",
@@ -48,7 +52,11 @@
     "shareProduct": "Share",
     "price": "Price",
     "free_shipping": "Free Shipping",
-    "quantity": "Quantity"
+    "quantity": "Quantity",
+    "added": "Added!",
+    "easyReturns": "Easy Returns",
+    "securePayment": "Secure Payment",
+    "premiumQuality": "Premium Quality"
   },
   "cart": {
     "title": "Shopping Cart",
@@ -64,7 +72,9 @@
   },
   "whatsapp": {
     "message": "Hello! I would like to order:\n\n{items}\n\nTotal: {total}\n\nPlease confirm availability.",
-    "button": "Order on WhatsApp"
+    "button": "Order on WhatsApp",
+    "readyTitle": "Ready to Order?",
+    "readyDesc": "Connect with us directly on WhatsApp for a personal shopping experience, custom orders, and exclusive deals."
   },
   "footer": {
     "tagline": "Premium fashion for the modern woman",
@@ -78,7 +88,13 @@
     "emailPlaceholder": "Your email address",
     "rights": "All rights reserved",
     "privacy": "Privacy Policy",
-    "terms": "Terms of Service"
+    "terms": "Terms of Service",
+    "madeWith": "Made with"
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "description": "The page you are looking for does not exist.",
+    "backHome": "Back to Home"
   },
   "admin": {
     "dashboard": "Dashboard",
@@ -112,12 +128,91 @@
     "loginButton": "Sign In",
     "totalProducts": "Total Products",
     "totalCategories": "Total Categories",
-    "recentProducts": "Recent Products"
+    "recentProducts": "Recent Products",
+    "adminPanel": "Admin Panel",
+    "signOut": "Sign Out",
+    "welcomeBack": "Welcome back, Admin",
+    "addNewProduct": "Add New Product",
+    "uploadSubtitle": "Upload with images and sizes",
+    "manageCategories": "Manage Categories",
+    "organizeProducts": "Organize your products",
+    "noProductsYet": "No products yet",
+    "addFirstProduct": "Add your first product →",
+    "viewAll": "View all",
+    "searchProducts": "Search products...",
+    "noProductsFound": "No products found",
+    "addCategory": "Add Category",
+    "newCategory": "New Category",
+    "create": "Create",
+    "noCategoriesYet": "No categories yet",
+    "createFirstCategory": "Create your first category →",
+    "deleteCategoryConfirm": "Delete this category? Products in it will be uncategorized.",
+    "invalidCredentials": "Invalid credentials. Please try again.",
+    "signingIn": "Signing in...",
+    "adminDashboard": "Admin Dashboard",
+    "secureAccess": "Admin Panel · Secure Access Only",
+    "whatsappNumber": "WhatsApp Number",
+    "configureInEnv": "Configure in .env.local file",
+    "adminEmail": "Admin Email",
+    "productCount": "{count} total products",
+    "categoriesCount": "{count} categories",
+    "noSizes": "No sizes",
+    "colProduct": "Product",
+    "colCategory": "Category",
+    "colPrice": "Price",
+    "colStatus": "Status",
+    "colActions": "Actions",
+    "outOfStock": "Out of Stock",
+    "optional": "Optional",
+    "fillDetails": "Fill in the product details",
+    "tabBasicInfo": "Basic Info",
+    "tabLanguages": "Languages",
+    "tabImages": "Images",
+    "tabSizes": "Sizes",
+    "tabSeo": "SEO",
+    "dropImages": "Drop images here",
+    "imageFormats": "PNG, JPG, WebP up to 10MB each",
+    "browseFiles": "Browse Files",
+    "uploading": "Uploading...",
+    "mainImage": "Main",
+    "addSizeHint": "Add available sizes and stock quantities.",
+    "sizePlaceholder": "Size (e.g. S, M, L, XL, UK8)",
+    "quickAdd": "Quick add:",
+    "seoHint": "Optimize for search engines. These override the default product name/description.",
+    "seoTitleLabel": "SEO Title (English)",
+    "seoDescLabel": "SEO Description (English)",
+    "googlePreview": "Google Preview",
+    "noDescription": "No description provided.",
+    "saving": "Saving...",
+    "updateProduct": "Update Product",
+    "createProduct": "Create Product",
+    "failedToSave": "Failed to save",
+    "noCategoriesLink": "No categories yet.",
+    "createOneFirst": "Create one first.",
+    "selectCategory": "Select a category...",
+    "uploadError": "Upload error: ",
+    "productNameEn": "Product Name (English)",
+    "descriptionEn": "Description (English)",
+    "editingProduct": "Editing: {name}",
+    "ifEmptyFallback": "If left empty, the English version will be used as fallback.",
+    "seoCharsOf60": "{count}/60 characters",
+    "seoCharsOf160": "{count}/160 characters"
   },
   "search": {
     "placeholder": "Search products...",
     "noResults": "No products found for",
     "results": "results for"
+  },
+  "shop": {
+    "title": "Shop",
+    "productSingular": "product",
+    "productPlural": "products",
+    "filters": "Filters",
+    "sortNewest": "Newest",
+    "sortPriceLow": "Price: Low to High",
+    "sortPriceHigh": "Price: High to Low",
+    "all": "All",
+    "categoriesLabel": "Categories"
   },
   "common": {
     "loading": "Loading...",

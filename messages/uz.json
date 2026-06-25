@@ -23,7 +23,10 @@
     "subtitle": "Sifat va nafosatni qadrlaydigan zamonaviy ayol uchun yaratilgan premium moda buyumlarining eksklyuziv kolleksiyasini kashf eting.",
     "cta": "Xarid Qilish",
     "ctaSecondary": "Kolleksiyani Ko'rish",
-    "scrollDown": "O'rganish uchun aylantiring"
+    "scrollDown": "O'rganish uchun aylantiring",
+    "statsProducts": "Mahsulotlar",
+    "statsBrands": "Brendlar",
+    "statsRated": "Reyting"
   },
   "featured": {
     "title": "Tanlangan Kolleksiya",
@@ -33,7 +36,8 @@
   "categories": {
     "title": "Kategoriya bo'yicha Xarid Qiling",
     "subtitle": "Izlayotganingizni aynan toping",
-    "viewAll": "Barchasini Ko'rish"
+    "viewAll": "Barchasini Ko'rish",
+    "items": "mahsulot"
   },
   "product": {
     "addToCart": "Savatga Qo'shish",
@@ -48,7 +52,11 @@
     "shareProduct": "Ulashish",
     "price": "Narx",
     "free_shipping": "Bepul Yetkazib Berish",
-    "quantity": "Miqdor"
+    "quantity": "Miqdor",
+    "added": "Qo'shildi!",
+    "easyReturns": "Oson Qaytarish",
+    "securePayment": "Xavfsiz To'lov",
+    "premiumQuality": "Premium Sifat"
   },
   "cart": {
     "title": "Xarid Savati",
@@ -64,7 +72,9 @@
   },
   "whatsapp": {
     "message": "Salom! Men buyurtma bermoqchiman:\n\n{items}\n\nJami: {total}\n\nIltimos, mavjudligini tasdiqlang.",
-    "button": "WhatsApp da Buyurtma Berish"
+    "button": "WhatsApp da Buyurtma Berish",
+    "readyTitle": "Buyurtma Berishga Tayyormisiz?",
+    "readyDesc": "Shaxsiy xarid tajribasi, maxsus buyurtmalar va eksklyuziv chegirmalar uchun WhatsApp orqali biz bilan bog'laning."
   },
   "footer": {
     "tagline": "Zamonaviy ayol uchun premium moda",
@@ -78,7 +88,13 @@
     "emailPlaceholder": "Email manzilingiz",
     "rights": "Barcha huquqlar himoyalangan",
     "privacy": "Maxfiylik Siyosati",
-    "terms": "Foydalanish Shartlari"
+    "terms": "Foydalanish Shartlari",
+    "madeWith": "Mehr bilan yaratilgan"
+  },
+  "notFound": {
+    "title": "Sahifa Topilmadi",
+    "description": "Siz qidirayotgan sahifa mavjud emas.",
+    "backHome": "Bosh Sahifaga Qaytish"
   },
   "admin": {
     "dashboard": "Boshqaruv Paneli",
@@ -112,12 +128,91 @@
     "loginButton": "Tizimga Kirish",
     "totalProducts": "Jami Mahsulotlar",
     "totalCategories": "Jami Kategoriyalar",
-    "recentProducts": "So'nggi Mahsulotlar"
+    "recentProducts": "So'nggi Mahsulotlar",
+    "adminPanel": "Admin Paneli",
+    "signOut": "Chiqish",
+    "welcomeBack": "Xush kelibsiz, Admin",
+    "addNewProduct": "Yangi Mahsulot Qo'shish",
+    "uploadSubtitle": "Rasmlar va o'lchamlar bilan yuklash",
+    "manageCategories": "Kategoriyalarni Boshqarish",
+    "organizeProducts": "Mahsulotlaringizni tartibga soling",
+    "noProductsYet": "Hali mahsulotlar yo'q",
+    "addFirstProduct": "Birinchi mahsulotingizni qo'shing →",
+    "viewAll": "Barchasini ko'rish",
+    "searchProducts": "Mahsulotlarni qidiring...",
+    "noProductsFound": "Mahsulotlar topilmadi",
+    "addCategory": "Kategoriya Qo'shish",
+    "newCategory": "Yangi Kategoriya",
+    "create": "Yaratish",
+    "noCategoriesYet": "Hali kategoriyalar yo'q",
+    "createFirstCategory": "Birinchi kategoriyangizni yarating →",
+    "deleteCategoryConfirm": "Bu kategoriyani o'chirasizmi? Undagi mahsulotlar kategoriyasiz qoladi.",
+    "invalidCredentials": "Noto'g'ri ma'lumotlar. Iltimos, qayta urinib ko'ring.",
+    "signingIn": "Kirish...",
+    "adminDashboard": "Admin Paneli",
+    "secureAccess": "Admin Paneli · Faqat Ruxsatli Kirish",
+    "whatsappNumber": "WhatsApp Raqami",
+    "configureInEnv": ".env.local faylida sozlang",
+    "adminEmail": "Admin Email",
+    "productCount": "{count} ta mahsulot",
+    "categoriesCount": "{count} ta kategoriya",
+    "noSizes": "O'lchamlar yo'q",
+    "colProduct": "Mahsulot",
+    "colCategory": "Kategoriya",
+    "colPrice": "Narx",
+    "colStatus": "Holat",
+    "colActions": "Amallar",
+    "outOfStock": "Mavjud Emas",
+    "optional": "Ixtiyoriy",
+    "fillDetails": "Mahsulot ma'lumotlarini to'ldiring",
+    "tabBasicInfo": "Asosiy Ma'lumot",
+    "tabLanguages": "Tillar",
+    "tabImages": "Rasmlar",
+    "tabSizes": "O'lchamlar",
+    "tabSeo": "SEO",
+    "dropImages": "Rasmlarni shu yerga tashlang",
+    "imageFormats": "PNG, JPG, WebP har biri 10MB gacha",
+    "browseFiles": "Fayllarni Ko'rish",
+    "uploading": "Yuklanmoqda...",
+    "mainImage": "Asosiy",
+    "addSizeHint": "Mavjud o'lchamlar va zaxira miqdorini qo'shing.",
+    "sizePlaceholder": "O'lcham (masalan: S, M, L, XL, UK8)",
+    "quickAdd": "Tez qo'shish:",
+    "seoHint": "Qidiruv tizimlari uchun optimallash. Bu standart mahsulot nomi/tavsifni almastiradi.",
+    "seoTitleLabel": "SEO Sarlavha (Inglizcha)",
+    "seoDescLabel": "SEO Tavsif (Inglizcha)",
+    "googlePreview": "Google Ko'rinishi",
+    "noDescription": "Tavsif kiritilmagan.",
+    "saving": "Saqlanmoqda...",
+    "updateProduct": "Mahsulotni Yangilash",
+    "createProduct": "Mahsulot Yaratish",
+    "failedToSave": "Saqlashda xatolik",
+    "noCategoriesLink": "Hali kategoriyalar yo'q.",
+    "createOneFirst": "Avval bittasini yarating.",
+    "selectCategory": "Kategoriya tanlang...",
+    "uploadError": "Yuklash xatoligi: ",
+    "productNameEn": "Mahsulot Nomi (Inglizcha)",
+    "descriptionEn": "Tavsif (Inglizcha)",
+    "editingProduct": "Tahrirlash: {name}",
+    "ifEmptyFallback": "Bo'sh qoldirilsa, inglizcha versiya ishlatiladi.",
+    "seoCharsOf60": "{count}/60 belgi",
+    "seoCharsOf160": "{count}/160 belgi"
   },
   "search": {
     "placeholder": "Mahsulotlarni qidiring...",
     "noResults": "Uchun mahsulot topilmadi",
     "results": "uchun natijalar"
+  },
+  "shop": {
+    "title": "Do'kon",
+    "productSingular": "mahsulot",
+    "productPlural": "mahsulot",
+    "filters": "Filtrlar",
+    "sortNewest": "Eng Yangi",
+    "sortPriceLow": "Narx: Pastdan Yuqoriga",
+    "sortPriceHigh": "Narx: Yuqoridan Pastga",
+    "all": "Barchasi",
+    "categoriesLabel": "Kategoriyalar"
   },
   "common": {
     "loading": "Yuklanmoqda...",

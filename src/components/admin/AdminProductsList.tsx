@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { Plus, Search, Edit, Trash2, Package, Star } from "lucide-react";
 import Image from "next/image";
 import { formatPrice } from "@/lib/utils";
+import { useTranslations } from "next-intl";
 
 interface Product {
   id: string;
@@ -28,6 +29,7 @@ export function AdminProductsList({ products: initialProducts }: AdminProductsLi
   const [products, setProducts] = useState(initialProducts);
   const [search, setSearch] = useState("");
   const [deletingId, setDeletingId] = useState<string | null>(null);
+  const t = useTranslations("admin");
 
   const filtered = products.filter((p) =>
     p.nameEn.toLowerCase().includes(search.toLowerCase()) ||
@@ -35,7 +37,7 @@ export function AdminProductsList({ products: initialProducts }: AdminProductsLi
   );
 
   const handleDelete = async (id: string) => {
-    if (!confirm("Are you sure you want to delete this product?")) return;
+    if (!confirm(t("confirmDelete"))) return;
     setDeletingId(id);
     try {
       const res = await fetch(`/api/products/${id}`, { method: "DELETE" });
@@ -52,8 +54,8 @@ export function AdminProductsList({ products: initialProducts }: AdminProductsLi
       {/* Header */}
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-2xl font-bold text-white">Products</h1>
-          <p className="text-gray-400 text-sm mt-1">{products.length} total products</p>
+          <h1 className="text-2xl font-bold text-white">{t("products")}</h1>
+          <p className="text-gray-400 text-sm mt-1">{t("productCount", { count: products.length })}</p>
         </div>
         <Link href="/admin/products/new">
           <motion.button
@@ -62,7 +64,7 @@ export function AdminProductsList({ products: initialProducts }: AdminProductsLi
             className="flex items-center gap-2 px-4 py-2.5 bg-brand-600 hover:bg-brand-700 text-white text-sm font-semibold rounded-xl transition-colors"
           >
             <Plus className="w-4 h-4" />
-            Add Product
+            {t("addProduct")}
           </motion.button>
         </Link>
       </div>
@@ -74,7 +76,7 @@ export function AdminProductsList({ products: initialProducts }: AdminProductsLi
           type="text"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          placeholder="Search products..."
+          placeholder={t("searchProducts")}
           className="w-full pl-10 pr-4 py-3 bg-gray-900 border border-white/10 rounded-xl text-white placeholder-gray-600 focus:outline-none focus:border-brand-500 text-sm"
         />
       </div>
@@ -84,20 +86,20 @@ export function AdminProductsList({ products: initialProducts }: AdminProductsLi
         {filtered.length === 0 ? (
           <div className="p-12 text-center">
             <Package className="w-12 h-12 mx-auto mb-3 text-gray-600" />
-            <p className="text-gray-400">No products found</p>
+            <p className="text-gray-400">{t("noProductsFound")}</p>
             <Link href="/admin/products/new" className="text-brand-400 hover:text-brand-300 text-sm mt-2 inline-block">
-              Add your first product →
+              {t("addFirstProduct")}
             </Link>
           </div>
         ) : (
           <>
             {/* Table Header */}
             <div className="grid grid-cols-12 gap-4 px-6 py-3 border-b border-white/5 text-xs font-medium text-gray-500 uppercase tracking-wider">
-              <div className="col-span-5">Product</div>
-              <div className="col-span-2 hidden md:block">Category</div>
-              <div className="col-span-2 hidden md:block">Price</div>
-              <div className="col-span-2 hidden md:block">Status</div>
-              <div className="col-span-3 md:col-span-1 text-right">Actions</div>
+              <div className="col-span-5">{t("colProduct")}</div>
+              <div className="col-span-2 hidden md:block">{t("colCategory")}</div>
+              <div className="col-span-2 hidden md:block">{t("colPrice")}</div>
+              <div className="col-span-2 hidden md:block">{t("colStatus")}</div>
+              <div className="col-span-3 md:col-span-1 text-right">{t("colActions")}</div>
             </div>
 
             {/* Table Body */}
@@ -135,7 +137,7 @@ export function AdminProductsList({ products: initialProducts }: AdminProductsLi
                       <p className="text-gray-500 text-xs">
                         {product.sizes.length > 0
                           ? product.sizes.map((s) => s.name).join(", ")
-                          : "No sizes"}
+                          : t("noSizes")}
                       </p>
                     </div>
                   </div>
@@ -159,7 +161,7 @@ export function AdminProductsList({ products: initialProducts }: AdminProductsLi
                         ? "bg-green-500/10 text-green-400"
                         : "bg-red-500/10 text-red-400"
                     }`}>
-                      {product.inStock ? "In Stock" : "Out of Stock"}
+                      {product.inStock ? t("inStock") : t("outOfStock")}
                     </span>
                   </div>
 

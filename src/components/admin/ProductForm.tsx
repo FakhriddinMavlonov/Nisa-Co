@@ -17,6 +17,7 @@ import {
   Search,
 } from "lucide-react";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 interface Category {
   id: string;
@@ -74,6 +75,7 @@ const LANGS = [
 
 export function ProductForm({ product, categories }: ProductFormProps) {
   const router = useRouter();
+  const t = useTranslations("admin");
   const isEdit = !!product;
 
   const [activeTab, setActiveTab] = useState<"basic" | "lang" | "images" | "sizes" | "seo">("basic");
@@ -115,7 +117,7 @@ export function ProductForm({ product, categories }: ProductFormProps) {
 
       if (!res.ok) {
         console.error("Upload server error:", data?.error ?? res.status);
-        alert("Upload xatoligi: " + (data?.error ?? "Server error " + res.status));
+        alert(t("uploadError") + (data?.error ?? "Server error " + res.status));
         return;
       }
 
@@ -128,7 +130,7 @@ export function ProductForm({ product, categories }: ProductFormProps) {
     } finally {
       setUploading(false);
     }
-  }, [nameEn]);
+  }, [nameEn, t]);
 
   const handleDrop = useCallback((e: React.DragEvent) => {
     e.preventDefault();
@@ -180,7 +182,7 @@ export function ProductForm({ product, categories }: ProductFormProps) {
         router.push("/admin/products");
       } else {
         const data = await res.json();
-        setErrors({ submit: data.error || "Failed to save" });
+        setErrors({ submit: data.error || t("failedToSave") });
       }
     } finally {
       setSaving(false);
@@ -188,11 +190,11 @@ export function ProductForm({ product, categories }: ProductFormProps) {
   };
 
   const TABS = [
-    { id: "basic", label: "Basic Info", icon: Package },
-    { id: "lang", label: "Languages", icon: Globe },
-    { id: "images", label: "Images", icon: ImageIcon },
-    { id: "sizes", label: "Sizes", icon: Ruler },
-    { id: "seo", label: "SEO", icon: Search },
+    { id: "basic", label: t("tabBasicInfo"), icon: Package },
+    { id: "lang", label: t("tabLanguages"), icon: Globe },
+    { id: "images", label: t("tabImages"), icon: ImageIcon },
+    { id: "sizes", label: t("tabSizes"), icon: Ruler },
+    { id: "seo", label: t("tabSeo"), icon: Search },
   ] as const;
 
   return (
@@ -207,10 +209,10 @@ export function ProductForm({ product, categories }: ProductFormProps) {
         </button>
         <div>
           <h1 className="text-2xl font-bold text-white">
-            {isEdit ? "Edit Product" : "Add New Product"}
+            {isEdit ? t("editProduct") : t("addNewProduct")}
           </h1>
           <p className="text-gray-400 text-sm mt-0.5">
-            {isEdit ? `Editing: ${product.nameEn}` : "Fill in the product details"}
+            {isEdit ? t("editingProduct", { name: product.nameEn }) : t("fillDetails")}
           </p>
         </div>
       </div>
@@ -247,7 +249,7 @@ export function ProductForm({ product, categories }: ProductFormProps) {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-1.5">
-                    Product Name (English) <span className="text-red-400">*</span>
+                    {t("productNameEn")} <span className="text-red-400">*</span>
                   </label>
                   <input
                     value={nameEn}
@@ -262,7 +264,7 @@ export function ProductForm({ product, categories }: ProductFormProps) {
 
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-1.5">
-                    Price <span className="text-red-400">*</span>
+                    {t("productPrice")} <span className="text-red-400">*</span>
                   </label>
                   <div className="flex gap-2">
                     <input
@@ -294,7 +296,7 @@ export function ProductForm({ product, categories }: ProductFormProps) {
 
               <div>
                 <label className="block text-sm font-medium text-gray-300 mb-1.5">
-                  Category <span className="text-red-400">*</span>
+                  {t("productCategory")} <span className="text-red-400">*</span>
                 </label>
                 <select
                   value={categoryId}
@@ -303,7 +305,7 @@ export function ProductForm({ product, categories }: ProductFormProps) {
                     errors.categoryId ? "border-red-500 focus:ring-red-500" : "border-white/10 focus:border-brand-500 focus:ring-brand-500"
                   } ${!categoryId && "text-gray-600"}`}
                 >
-                  <option value="">Select a category...</option>
+                  <option value="">{t("selectCategory")}</option>
                   {categories.map((cat) => (
                     <option key={cat.id} value={cat.id}>{cat.nameEn}</option>
                   ))}
@@ -311,14 +313,14 @@ export function ProductForm({ product, categories }: ProductFormProps) {
                 {errors.categoryId && <p className="text-red-400 text-xs mt-1">{errors.categoryId}</p>}
                 {categories.length === 0 && (
                   <p className="text-yellow-500 text-xs mt-1">
-                    No categories yet. <a href="/admin/categories" className="underline">Create one first.</a>
+                    {t("noCategoriesLink")} <a href="/admin/categories" className="underline">{t("createOneFirst")}</a>
                   </p>
                 )}
               </div>
 
               <div>
                 <label className="block text-sm font-medium text-gray-300 mb-1.5">
-                  Description (English)
+                  {t("descriptionEn")}
                 </label>
                 <textarea
                   value={descEn}
@@ -337,7 +339,7 @@ export function ProductForm({ product, categories }: ProductFormProps) {
                   >
                     <span className={`absolute top-0.5 w-4 h-4 bg-white rounded-full transition-transform shadow ${featured ? "translate-x-5" : "translate-x-0.5"}`} />
                   </div>
-                  <span className="text-sm text-gray-300">Featured</span>
+                  <span className="text-sm text-gray-300">{t("featured")}</span>
                 </label>
 
                 <label className="flex items-center gap-2.5 cursor-pointer">
@@ -347,7 +349,7 @@ export function ProductForm({ product, categories }: ProductFormProps) {
                   >
                     <span className={`absolute top-0.5 w-4 h-4 bg-white rounded-full transition-transform shadow ${inStock ? "translate-x-5" : "translate-x-0.5"}`} />
                   </div>
-                  <span className="text-sm text-gray-300">In Stock</span>
+                  <span className="text-sm text-gray-300">{t("inStock")}</span>
                 </label>
               </div>
             </motion.div>
@@ -376,7 +378,7 @@ export function ProductForm({ product, categories }: ProductFormProps) {
                     <div className="flex items-center gap-2 mb-4">
                       <span className="text-xl">{lang.flag}</span>
                       <h3 className="font-semibold text-white">{lang.label}</h3>
-                      <span className="text-xs text-gray-500 ml-auto">Optional</span>
+                      <span className="text-xs text-gray-500 ml-auto">{t("optional")}</span>
                     </div>
                     <div className="space-y-4">
                       <input
@@ -396,7 +398,7 @@ export function ProductForm({ product, categories }: ProductFormProps) {
                   </div>
                 );
               })}
-              <p className="text-gray-500 text-xs">If left empty, the English version will be used as fallback.</p>
+              <p className="text-gray-500 text-xs">{t("ifEmptyFallback")}</p>
             </motion.div>
           )}
 
@@ -414,7 +416,7 @@ export function ProductForm({ product, categories }: ProductFormProps) {
                 {uploading ? (
                   <div className="flex flex-col items-center gap-3">
                     <div className="w-12 h-12 border-2 border-brand-500 border-t-transparent rounded-full animate-spin" />
-                    <p className="text-gray-400 text-sm">Uploading...</p>
+                    <p className="text-gray-400 text-sm">{t("uploading")}</p>
                   </div>
                 ) : (
                   <div className="flex flex-col items-center gap-3">
@@ -422,11 +424,11 @@ export function ProductForm({ product, categories }: ProductFormProps) {
                       <Upload className="w-6 h-6 text-gray-400" />
                     </div>
                     <div>
-                      <p className="text-white font-medium text-sm">Drop images here</p>
-                      <p className="text-gray-500 text-xs mt-1">PNG, JPG, WebP up to 10MB each</p>
+                      <p className="text-white font-medium text-sm">{t("dropImages")}</p>
+                      <p className="text-gray-500 text-xs mt-1">{t("imageFormats")}</p>
                     </div>
                     <label className="cursor-pointer px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white text-sm font-medium rounded-xl transition-colors">
-                      Browse Files
+                      {t("browseFiles")}
                       <input
                         type="file"
                         multiple
@@ -464,7 +466,7 @@ export function ProductForm({ product, categories }: ProductFormProps) {
                       </div>
                       {i === 0 && (
                         <span className="absolute top-1.5 left-1.5 text-[10px] bg-brand-600 text-white px-1.5 py-0.5 rounded-full font-medium">
-                          Main
+                          {t("mainImage")}
                         </span>
                       )}
                     </div>
@@ -476,14 +478,14 @@ export function ProductForm({ product, categories }: ProductFormProps) {
 
           {activeTab === "sizes" && (
             <motion.div key="sizes" initial={{ opacity: 0, x: 10 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -10 }} className="space-y-4">
-              <p className="text-gray-400 text-sm">Add available sizes and stock quantities.</p>
+              <p className="text-gray-400 text-sm">{t("addSizeHint")}</p>
 
               {sizes.map((size, i) => (
                 <div key={i} className="flex gap-3 items-center">
                   <input
                     value={size.name}
                     onChange={(e) => updateSize(i, "name", e.target.value)}
-                    placeholder="Size (e.g. S, M, L, XL, UK8)"
+                    placeholder={t("sizePlaceholder")}
                     className="flex-1 px-4 py-3 bg-gray-800 border border-white/10 rounded-xl text-white placeholder-gray-600 focus:outline-none focus:border-brand-500 text-sm"
                   />
                   <input
@@ -508,12 +510,12 @@ export function ProductForm({ product, categories }: ProductFormProps) {
                 className="flex items-center gap-2 px-4 py-3 border border-dashed border-white/20 hover:border-white/30 rounded-xl text-gray-400 hover:text-white transition-all text-sm w-full justify-center"
               >
                 <Plus className="w-4 h-4" />
-                Add Size
+                {t("addSize")}
               </button>
 
               {/* Quick size presets */}
               <div>
-                <p className="text-xs text-gray-500 mb-2">Quick add:</p>
+                <p className="text-xs text-gray-500 mb-2">{t("quickAdd")}</p>
                 <div className="flex flex-wrap gap-2">
                   {[["XS", "S", "M", "L", "XL"], ["UK6", "UK8", "UK10", "UK12", "UK14"]].map((set, si) => (
                     <button
@@ -531,10 +533,10 @@ export function ProductForm({ product, categories }: ProductFormProps) {
 
           {activeTab === "seo" && (
             <motion.div key="seo" initial={{ opacity: 0, x: 10 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -10 }} className="space-y-5">
-              <p className="text-gray-400 text-sm">Optimize for search engines. These override the default product name/description.</p>
+              <p className="text-gray-400 text-sm">{t("seoHint")}</p>
 
               <div>
-                <label className="block text-sm font-medium text-gray-300 mb-1.5">SEO Title (English)</label>
+                <label className="block text-sm font-medium text-gray-300 mb-1.5">{t("seoTitleLabel")}</label>
                 <input
                   value={seoTitleEn}
                   onChange={(e) => setSeoTitleEn(e.target.value)}
@@ -542,11 +544,11 @@ export function ProductForm({ product, categories }: ProductFormProps) {
                   maxLength={60}
                   className="w-full px-4 py-3 bg-gray-800 border border-white/10 rounded-xl text-white placeholder-gray-600 focus:outline-none focus:border-brand-500 text-sm"
                 />
-                <p className="text-gray-600 text-xs mt-1">{seoTitleEn.length}/60 characters</p>
+                <p className="text-gray-600 text-xs mt-1">{t("seoCharsOf60", { count: seoTitleEn.length })}</p>
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-300 mb-1.5">SEO Description (English)</label>
+                <label className="block text-sm font-medium text-gray-300 mb-1.5">{t("seoDescLabel")}</label>
                 <textarea
                   value={seoDescEn}
                   onChange={(e) => setSeoDescEn(e.target.value)}
@@ -555,17 +557,17 @@ export function ProductForm({ product, categories }: ProductFormProps) {
                   rows={3}
                   className="w-full px-4 py-3 bg-gray-800 border border-white/10 rounded-xl text-white placeholder-gray-600 focus:outline-none focus:border-brand-500 text-sm resize-none"
                 />
-                <p className="text-gray-600 text-xs mt-1">{seoDescEn.length}/160 characters</p>
+                <p className="text-gray-600 text-xs mt-1">{t("seoCharsOf160", { count: seoDescEn.length })}</p>
               </div>
 
               {/* SEO Preview */}
               {(seoTitleEn || nameEn) && (
                 <div className="border border-white/10 rounded-xl p-4 bg-gray-800/50">
-                  <p className="text-xs text-gray-500 mb-3">Google Preview</p>
+                  <p className="text-xs text-gray-500 mb-3">{t("googlePreview")}</p>
                   <p className="text-blue-400 text-sm font-medium">{seoTitleEn || `${nameEn} | Nisa&Co`}</p>
                   <p className="text-green-600 text-xs mt-0.5">nisa.co.uk/en/products/...</p>
                   <p className="text-gray-400 text-xs mt-1 leading-relaxed">
-                    {seoDescEn || descEn || "No description provided."}
+                    {seoDescEn || descEn || t("noDescription")}
                   </p>
                 </div>
               )}
@@ -587,7 +589,7 @@ export function ProductForm({ product, categories }: ProductFormProps) {
           onClick={() => router.push("/admin/products")}
           className="px-6 py-3 text-gray-400 hover:text-white text-sm font-medium transition-colors"
         >
-          Cancel
+          {t("cancel")}
         </button>
         <motion.button
           onClick={handleSubmit}
@@ -602,12 +604,12 @@ export function ProductForm({ product, categories }: ProductFormProps) {
                 <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
                 <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
               </svg>
-              Saving...
+              {t("saving")}
             </>
           ) : (
             <>
               <Save className="w-4 h-4" />
-              {isEdit ? "Update Product" : "Create Product"}
+              {isEdit ? t("updateProduct") : t("createProduct")}
             </>
           )}
         </motion.button>

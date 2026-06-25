@@ -15,6 +15,7 @@ interface CartDrawerProps {
 
 export function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
   const t = useTranslations("cart");
+  const tProduct = useTranslations("product");
   const locale = useLocale() as Locale;
   const { items, removeItem, updateQuantity, total } = useCartContext();
 
@@ -125,7 +126,7 @@ export function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
                           </p>
                           {item.selectedSize && (
                             <p className="text-xs text-gray-500 mt-0.5">
-                              Size: {item.selectedSize}
+                              {tProduct("size")}: {item.selectedSize}
                             </p>
                           )}
                           <p className="text-brand-600 font-semibold text-sm mt-1">

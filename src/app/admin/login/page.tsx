@@ -5,6 +5,7 @@ import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import { Eye, EyeOff, Lock, Mail, Sparkles } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export default function AdminLoginPage() {
   const router = useRouter();
@@ -13,6 +14,7 @@ export default function AdminLoginPage() {
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+  const t = useTranslations("admin");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -28,7 +30,7 @@ export default function AdminLoginPage() {
     setLoading(false);
 
     if (result?.error) {
-      setError("Invalid credentials. Please try again.");
+      setError(t("invalidCredentials"));
     } else {
       router.push("/admin");
     }
@@ -57,14 +59,14 @@ export default function AdminLoginPage() {
             <h1 className="font-serif text-3xl font-bold text-white">
               Nisa<span className="text-gold-400">&amp;</span>Co
             </h1>
-            <p className="text-gray-400 text-sm mt-1">Admin Dashboard</p>
+            <p className="text-gray-400 text-sm mt-1">{t("adminDashboard")}</p>
           </div>
 
           {/* Form */}
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
               <label className="block text-sm font-medium text-gray-300 mb-1.5">
-                Email
+                {t("email")}
               </label>
               <div className="relative">
                 <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500" />
@@ -81,7 +83,7 @@ export default function AdminLoginPage() {
 
             <div>
               <label className="block text-sm font-medium text-gray-300 mb-1.5">
-                Password
+                {t("password")}
               </label>
               <div className="relative">
                 <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500" />
@@ -126,16 +128,16 @@ export default function AdminLoginPage() {
                     <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
                     <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
                   </svg>
-                  Signing in...
+                  {t("signingIn")}
                 </span>
               ) : (
-                "Sign In"
+                t("loginButton")
               )}
             </motion.button>
           </form>
 
           <p className="text-center text-xs text-gray-600 mt-6">
-            Nisa&amp;Co Admin Panel · Secure Access Only
+            {t("secureAccess")}
           </p>
         </div>
       </motion.div>

@@ -2,7 +2,6 @@
 
 import { useState, useMemo } from "react";
 import { useTranslations } from "next-intl";
-import { useRouter } from "@/i18n/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Search, SlidersHorizontal, X } from "lucide-react";
 import { Product } from "@/types";
@@ -37,8 +36,8 @@ export function ProductsPageClient({
   initialCategory,
 }: ProductsPageClientProps) {
   const t = useTranslations("search");
-  const tProd = useTranslations("common");
-  const router = useRouter();
+  const tShop = useTranslations("shop");
+  const tCommon = useTranslations("common");
   const [search, setSearch] = useState(initialSearch || "");
   const [selectedCategory, setSelectedCategory] = useState(initialCategory || "");
   const [filtersOpen, setFiltersOpen] = useState(false);
@@ -73,6 +72,10 @@ export function ProductsPageClient({
     e.preventDefault();
   };
 
+  const productCountLabel = filteredProducts.length === 1
+    ? `${filteredProducts.length} ${tShop("productSingular")}`
+    : `${filteredProducts.length} ${tShop("productPlural")}`;
+
   return (
     <div className="pt-24 pb-16 min-h-screen">
       {/* Header */}
@@ -83,11 +86,9 @@ export function ProductsPageClient({
             animate={{ opacity: 1, y: 0 }}
             className="font-serif text-3xl md:text-4xl font-bold text-gray-900 mb-2"
           >
-            Shop
+            {tShop("title")}
           </motion.h1>
-          <p className="text-gray-500">
-            {filteredProducts.length} {filteredProducts.length === 1 ? "product" : "products"}
-          </p>
+          <p className="text-gray-500">{productCountLabel}</p>
         </div>
       </div>
 
@@ -119,7 +120,7 @@ export function ProductsPageClient({
             className="flex items-center gap-2 px-4 py-3 bg-white border border-gray-200 rounded-xl text-sm font-medium text-gray-700 hover:border-brand-400 shadow-sm transition-colors"
           >
             <SlidersHorizontal className="w-4 h-4" />
-            <span className="hidden sm:inline">Filters</span>
+            <span className="hidden sm:inline">{tShop("filters")}</span>
           </button>
 
           <select
@@ -127,9 +128,9 @@ export function ProductsPageClient({
             onChange={(e) => setSortBy(e.target.value as typeof sortBy)}
             className="px-4 py-3 bg-white border border-gray-200 rounded-xl text-sm font-medium text-gray-700 focus:outline-none focus:border-brand-400 shadow-sm cursor-pointer"
           >
-            <option value="newest">Newest</option>
-            <option value="price-asc">Price: Low to High</option>
-            <option value="price-desc">Price: High to Low</option>
+            <option value="newest">{tShop("sortNewest")}</option>
+            <option value="price-asc">{tShop("sortPriceLow")}</option>
+            <option value="price-desc">{tShop("sortPriceHigh")}</option>
           </select>
         </div>
 
@@ -144,7 +145,7 @@ export function ProductsPageClient({
             >
               <div className="bg-white border border-gray-200 rounded-xl p-4 shadow-sm">
                 <p className="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-3">
-                  Categories
+                  {tShop("categoriesLabel")}
                 </p>
                 <div className="flex flex-wrap gap-2">
                   <button
@@ -155,7 +156,7 @@ export function ProductsPageClient({
                         : "bg-gray-100 text-gray-700 hover:bg-gray-200"
                     }`}
                   >
-                    All
+                    {tShop("all")}
                   </button>
                   {categories.map((cat) => {
                     const name = getLocalizedField(cat, "name", locale as Locale);
@@ -191,7 +192,7 @@ export function ProductsPageClient({
               onClick={() => { setSearch(""); setSelectedCategory(""); }}
               className="text-brand-600 hover:text-brand-700 font-medium text-sm"
             >
-              {tProd("tryAgain")}
+              {tCommon("tryAgain")}
             </button>
           </motion.div>
         ) : (

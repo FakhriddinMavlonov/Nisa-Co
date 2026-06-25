@@ -7,6 +7,7 @@ import { Instagram, Facebook, Heart } from "lucide-react";
 
 export function Footer() {
   const t = useTranslations("footer");
+  const tNav = useTranslations("nav");
   const currentYear = new Date().getFullYear();
 
   return (
@@ -48,8 +49,8 @@ export function Footer() {
             </h3>
             <ul className="space-y-2">
               {[
-                { href: "/", label: "Home" },
-                { href: "/products", label: "Shop" },
+                { href: "/", label: tNav("home") },
+                { href: "/products", label: tNav("shop") },
               ].map((link) => (
                 <li key={link.href}>
                   <Link
@@ -109,7 +110,7 @@ export function Footer() {
             © {currentYear} Nisa&amp;Co. {t("rights")}
           </p>
           <div className="flex items-center gap-1">
-            <span>Made with</span>
+            <span>{t("madeWith")}</span>
             <Heart className="w-3.5 h-3.5 text-brand-500 fill-brand-500" />
           </div>
         </div>

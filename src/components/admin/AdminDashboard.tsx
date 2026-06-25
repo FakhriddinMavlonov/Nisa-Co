@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { Package, Tag, Plus, ArrowRight, TrendingUp } from "lucide-react";
 import Image from "next/image";
 import { formatPrice } from "@/lib/utils";
+import { useTranslations } from "next-intl";
 
 interface RecentProduct {
   id: string;
@@ -23,43 +24,43 @@ interface AdminDashboardProps {
   recentProducts: RecentProduct[];
 }
 
-const STATS = (productCount: number, categoryCount: number) => [
-  {
-    label: "Total Products",
-    value: productCount,
-    icon: Package,
-    color: "text-blue-400",
-    bg: "bg-blue-500/10",
-    href: "/admin/products",
-  },
-  {
-    label: "Categories",
-    value: categoryCount,
-    icon: Tag,
-    color: "text-purple-400",
-    bg: "bg-purple-500/10",
-    href: "/admin/categories",
-  },
-  {
-    label: "In Stock",
-    value: productCount,
-    icon: TrendingUp,
-    color: "text-green-400",
-    bg: "bg-green-500/10",
-    href: "/admin/products",
-  },
-];
-
 export function AdminDashboard({ productCount, categoryCount, recentProducts }: AdminDashboardProps) {
-  const stats = STATS(productCount, categoryCount);
+  const t = useTranslations("admin");
+
+  const stats = [
+    {
+      label: t("totalProducts"),
+      value: productCount,
+      icon: Package,
+      color: "text-blue-400",
+      bg: "bg-blue-500/10",
+      href: "/admin/products",
+    },
+    {
+      label: t("totalCategories"),
+      value: categoryCount,
+      icon: Tag,
+      color: "text-purple-400",
+      bg: "bg-purple-500/10",
+      href: "/admin/categories",
+    },
+    {
+      label: t("inStock"),
+      value: productCount,
+      icon: TrendingUp,
+      color: "text-green-400",
+      bg: "bg-green-500/10",
+      href: "/admin/products",
+    },
+  ];
 
   return (
     <div className="space-y-8">
       {/* Header */}
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-2xl font-bold text-white">Dashboard</h1>
-          <p className="text-gray-400 text-sm mt-1">Welcome back, Admin</p>
+          <h1 className="text-2xl font-bold text-white">{t("dashboard")}</h1>
+          <p className="text-gray-400 text-sm mt-1">{t("welcomeBack")}</p>
         </div>
         <Link href="/admin/products/new">
           <motion.button
@@ -68,7 +69,7 @@ export function AdminDashboard({ productCount, categoryCount, recentProducts }: 
             className="flex items-center gap-2 px-4 py-2.5 bg-brand-600 hover:bg-brand-700 text-white text-sm font-semibold rounded-xl transition-colors"
           >
             <Plus className="w-4 h-4" />
-            Add Product
+            {t("addProduct")}
           </motion.button>
         </Link>
       </div>
@@ -104,8 +105,8 @@ export function AdminDashboard({ productCount, categoryCount, recentProducts }: 
                 <Plus className="w-5 h-5 text-brand-400" />
               </div>
               <div>
-                <p className="text-white font-semibold text-sm">Add New Product</p>
-                <p className="text-gray-400 text-xs">Upload with images and sizes</p>
+                <p className="text-white font-semibold text-sm">{t("addNewProduct")}</p>
+                <p className="text-gray-400 text-xs">{t("uploadSubtitle")}</p>
               </div>
               <ArrowRight className="w-4 h-4 text-gray-500 ml-auto group-hover:text-brand-400 group-hover:translate-x-1 transition-all" />
             </div>
@@ -119,8 +120,8 @@ export function AdminDashboard({ productCount, categoryCount, recentProducts }: 
                 <Tag className="w-5 h-5 text-purple-400" />
               </div>
               <div>
-                <p className="text-white font-semibold text-sm">Manage Categories</p>
-                <p className="text-gray-400 text-xs">Organize your products</p>
+                <p className="text-white font-semibold text-sm">{t("manageCategories")}</p>
+                <p className="text-gray-400 text-xs">{t("organizeProducts")}</p>
               </div>
               <ArrowRight className="w-4 h-4 text-gray-500 ml-auto group-hover:text-purple-400 group-hover:translate-x-1 transition-all" />
             </div>
@@ -131,9 +132,9 @@ export function AdminDashboard({ productCount, categoryCount, recentProducts }: 
       {/* Recent Products */}
       <div>
         <div className="flex items-center justify-between mb-4">
-          <h2 className="text-lg font-semibold text-white">Recent Products</h2>
+          <h2 className="text-lg font-semibold text-white">{t("recentProducts")}</h2>
           <Link href="/admin/products" className="text-brand-400 hover:text-brand-300 text-sm flex items-center gap-1">
-            View all <ArrowRight className="w-3 h-3" />
+            {t("viewAll")} <ArrowRight className="w-3 h-3" />
           </Link>
         </div>
 
@@ -141,9 +142,9 @@ export function AdminDashboard({ productCount, categoryCount, recentProducts }: 
           {recentProducts.length === 0 ? (
             <div className="p-8 text-center text-gray-500">
               <Package className="w-10 h-10 mx-auto mb-2 opacity-30" />
-              <p>No products yet</p>
+              <p>{t("noProductsYet")}</p>
               <Link href="/admin/products/new" className="text-brand-400 hover:text-brand-300 text-sm mt-2 inline-block">
-                Add your first product →
+                {t("addFirstProduct")}
               </Link>
             </div>
           ) : (
@@ -173,7 +174,7 @@ export function AdminDashboard({ productCount, categoryCount, recentProducts }: 
                     <div className="text-right flex-shrink-0">
                       <p className="text-brand-400 font-semibold text-sm">{formatPrice(product.price, product.currency)}</p>
                       <span className={`text-xs px-2 py-0.5 rounded-full ${product.inStock ? "bg-green-500/10 text-green-400" : "bg-red-500/10 text-red-400"}`}>
-                        {product.inStock ? "In Stock" : "Out of Stock"}
+                        {product.inStock ? t("inStock") : t("outOfStock")}
                       </span>
                     </div>
                   </div>

@@ -17,13 +17,7 @@ import {
   ChevronRight,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
-
-const NAV_ITEMS = [
-  { href: "/admin", label: "Dashboard", icon: LayoutDashboard, exact: true },
-  { href: "/admin/products", label: "Products", icon: Package },
-  { href: "/admin/categories", label: "Categories", icon: Tag },
-  { href: "/admin/settings", label: "Settings", icon: Settings },
-];
+import { useTranslations } from "next-intl";
 
 interface AdminLayoutProps {
   children: React.ReactNode;
@@ -32,6 +26,14 @@ interface AdminLayoutProps {
 export function AdminLayout({ children }: AdminLayoutProps) {
   const pathname = usePathname();
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const t = useTranslations("admin");
+
+  const NAV_ITEMS = [
+    { href: "/admin", label: t("dashboard"), icon: LayoutDashboard, exact: true },
+    { href: "/admin/products", label: t("products"), icon: Package },
+    { href: "/admin/categories", label: t("categories"), icon: Tag },
+    { href: "/admin/settings", label: t("settings"), icon: Settings },
+  ];
 
   const isActive = (href: string, exact?: boolean) => {
     if (exact) return pathname === href;
@@ -44,13 +46,13 @@ export function AdminLayout({ children }: AdminLayoutProps) {
       <div className="p-6 border-b border-white/10">
         <Link href="/admin" className="flex items-center gap-3">
           <div className="w-9 h-9 bg-brand-600 rounded-xl flex items-center justify-center">
-            <img src="/logo_nisaco.png" alt="Logo" className="w-5 h-5" />
+            <Sparkles className="w-5 h-5 text-white" />
           </div>
           <div>
             <p className="font-serif text-lg font-bold text-white">
               Nisa<span className="text-gold-400">&amp;</span>Co
             </p>
-            <p className="text-xs text-gray-500">Admin Panel</p>
+            <p className="text-xs text-gray-500">{t("adminPanel")}</p>
           </div>
         </Link>
       </div>
@@ -88,7 +90,7 @@ export function AdminLayout({ children }: AdminLayoutProps) {
           className="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium text-gray-400 hover:text-red-400 hover:bg-red-500/5 transition-all"
         >
           <LogOut className="w-4 h-4" />
-          Sign Out
+          {t("signOut")}
         </button>
       </div>
     </div>

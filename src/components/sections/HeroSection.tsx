@@ -120,9 +120,9 @@ export function HeroSection() {
             className="flex gap-8 mt-14"
           >
             {[
-              { value: "500+", label: "Products" },
-              { value: "50+", label: "Brands" },
-              { value: "5★", label: "Rated" },
+              { value: "500+", label: t("statsProducts") },
+              { value: "50+", label: t("statsBrands") },
+              { value: "5★", label: t("statsRated") },
             ].map((stat) => (
               <div key={stat.label}>
                 <p className="font-bold text-2xl text-gray-900">{stat.value}</p>

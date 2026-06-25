@@ -1,5 +1,5 @@
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages, getTranslations } from "next-intl/server";
+import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { CartProvider } from "@/context/CartContext";
@@ -57,7 +57,11 @@ export default async function LocaleLayout({ children, params }: Props) {
     notFound();
   }
 
-  const messages = await getMessages();
+  // Enable static rendering and ensure the request config resolves the
+  // locale from the URL segment (otherwise getMessages() falls back to "en").
+  setRequestLocale(locale);
+
+  const messages = await getMessages({ locale });
 
   return (
     <NextIntlClientProvider messages={messages} locale={locale}>

@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ShoppingBag, Search, ChevronDown } from "lucide-react";
 import { useCartContext } from "@/context/CartContext";
 import { CartDrawer } from "@/components/cart/CartDrawer";
-import { NisaLogo } from "@/components/ui/NisaLogo";
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 const LOCALES = [
@@ -77,8 +77,23 @@ export function Header() {
           <div className="flex items-center justify-between h-16 md:h-20">
 
             {/* Logo */}
-            <Link href="/" className="flex items-center shrink-0">
-              <NisaLogo className="h-12 md:h-14 w-auto" />
+            <Link href="/" className="flex items-center gap-2 shrink-0">
+              <Image
+                src="/logo_nisaco.png"
+                alt="Nisa&Co logo"
+                width={40}
+                height={48}
+                className="object-contain"
+                priority
+              />
+              <Image
+                src="/logo_nisaco_word.png"
+                alt="Nisa&Co"
+                width={110}
+                height={36}
+                className="object-contain"
+                priority
+              />
             </Link>
 
             {/* Desktop nav links */}

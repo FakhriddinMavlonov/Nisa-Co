@@ -88,7 +88,7 @@ export function CategoriesSection({ categories, locale }: CategoriesSectionProps
                         {name}
                       </h3>
                       <p className="text-xs text-gray-600">
-                        {category._count.products} {t("viewAll")}
+                        {category._count.products} {t("items")}
                       </p>
                       <div className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-gray-700 opacity-0 group-hover:opacity-100 transition-opacity">
                         {t("viewAll")} <ArrowRight className="w-3 h-3" />

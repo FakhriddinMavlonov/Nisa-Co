@@ -23,7 +23,10 @@
     "subtitle": "Descubre nuestra colección exclusiva de prendas de moda premium diseñadas para la mujer moderna que aprecia la calidad y la sofisticación.",
     "cta": "Comprar Ahora",
     "ctaSecondary": "Ver Colección",
-    "scrollDown": "Desplázate para explorar"
+    "scrollDown": "Desplázate para explorar",
+    "statsProducts": "Productos",
+    "statsBrands": "Marcas",
+    "statsRated": "Valorado"
   },
   "featured": {
     "title": "Colección Destacada",
@@ -33,7 +36,8 @@
   "categories": {
     "title": "Comprar por Categoría",
     "subtitle": "Encuentra exactamente lo que buscas",
-    "viewAll": "Ver Todo"
+    "viewAll": "Ver Todo",
+    "items": "artículos"
   },
   "product": {
     "addToCart": "Añadir al Carrito",
@@ -48,7 +52,11 @@
     "shareProduct": "Compartir",
     "price": "Precio",
     "free_shipping": "Envío Gratis",
-    "quantity": "Cantidad"
+    "quantity": "Cantidad",
+    "added": "¡Añadido!",
+    "easyReturns": "Devoluciones Fáciles",
+    "securePayment": "Pago Seguro",
+    "premiumQuality": "Calidad Premium"
   },
   "cart": {
     "title": "Carrito de Compras",
@@ -64,7 +72,9 @@
   },
   "whatsapp": {
     "message": "¡Hola! Me gustaría pedir:\n\n{items}\n\nTotal: {total}\n\nPor favor confirma la disponibilidad.",
-    "button": "Pedir en WhatsApp"
+    "button": "Pedir en WhatsApp",
+    "readyTitle": "¿Listo para Pedir?",
+    "readyDesc": "Conéctate con nosotros directamente en WhatsApp para una experiencia de compra personalizada, pedidos a medida y ofertas exclusivas."
   },
   "footer": {
     "tagline": "Moda premium para la mujer moderna",
@@ -78,7 +88,13 @@
     "emailPlaceholder": "Tu dirección de correo",
     "rights": "Todos los derechos reservados",
     "privacy": "Política de Privacidad",
-    "terms": "Términos de Servicio"
+    "terms": "Términos de Servicio",
+    "madeWith": "Hecho con"
+  },
+  "notFound": {
+    "title": "Página No Encontrada",
+    "description": "La página que buscas no existe.",
+    "backHome": "Volver al Inicio"
   },
   "admin": {
     "dashboard": "Panel de Control",
@@ -112,12 +128,91 @@
     "loginButton": "Iniciar Sesión",
     "totalProducts": "Total de Productos",
     "totalCategories": "Total de Categorías",
-    "recentProducts": "Productos Recientes"
+    "recentProducts": "Productos Recientes",
+    "adminPanel": "Panel de Administración",
+    "signOut": "Cerrar Sesión",
+    "welcomeBack": "Bienvenido de nuevo, Admin",
+    "addNewProduct": "Añadir Nuevo Producto",
+    "uploadSubtitle": "Sube con imágenes y tallas",
+    "manageCategories": "Gestionar Categorías",
+    "organizeProducts": "Organiza tus productos",
+    "noProductsYet": "Aún no hay productos",
+    "addFirstProduct": "Añade tu primer producto →",
+    "viewAll": "Ver todo",
+    "searchProducts": "Buscar productos...",
+    "noProductsFound": "No se encontraron productos",
+    "addCategory": "Añadir Categoría",
+    "newCategory": "Nueva Categoría",
+    "create": "Crear",
+    "noCategoriesYet": "Aún no hay categorías",
+    "createFirstCategory": "Crea tu primera categoría →",
+    "deleteCategoryConfirm": "¿Eliminar esta categoría? Los productos en ella quedarán sin categoría.",
+    "invalidCredentials": "Credenciales inválidas. Por favor, inténtalo de nuevo.",
+    "signingIn": "Iniciando sesión...",
+    "adminDashboard": "Panel de Administración",
+    "secureAccess": "Panel de Admin · Solo Acceso Autorizado",
+    "whatsappNumber": "Número de WhatsApp",
+    "configureInEnv": "Configura en el archivo .env.local",
+    "adminEmail": "Correo del Admin",
+    "productCount": "{count} productos en total",
+    "categoriesCount": "{count} categorías",
+    "noSizes": "Sin tallas",
+    "colProduct": "Producto",
+    "colCategory": "Categoría",
+    "colPrice": "Precio",
+    "colStatus": "Estado",
+    "colActions": "Acciones",
+    "outOfStock": "Agotado",
+    "optional": "Opcional",
+    "fillDetails": "Rellena los detalles del producto",
+    "tabBasicInfo": "Info Básica",
+    "tabLanguages": "Idiomas",
+    "tabImages": "Imágenes",
+    "tabSizes": "Tallas",
+    "tabSeo": "SEO",
+    "dropImages": "Suelta imágenes aquí",
+    "imageFormats": "PNG, JPG, WebP hasta 10MB cada uno",
+    "browseFiles": "Explorar Archivos",
+    "uploading": "Subiendo...",
+    "mainImage": "Principal",
+    "addSizeHint": "Añade tallas disponibles y cantidades de stock.",
+    "sizePlaceholder": "Talla (ej. S, M, L, XL, UK8)",
+    "quickAdd": "Añadir rápido:",
+    "seoHint": "Optimiza para motores de búsqueda. Estos reemplazan el nombre/descripción predeterminado.",
+    "seoTitleLabel": "Título SEO (Inglés)",
+    "seoDescLabel": "Descripción SEO (Inglés)",
+    "googlePreview": "Vista Previa de Google",
+    "noDescription": "Sin descripción proporcionada.",
+    "saving": "Guardando...",
+    "updateProduct": "Actualizar Producto",
+    "createProduct": "Crear Producto",
+    "failedToSave": "Error al guardar",
+    "noCategoriesLink": "Aún no hay categorías.",
+    "createOneFirst": "Crea una primero.",
+    "selectCategory": "Selecciona una categoría...",
+    "uploadError": "Error de subida: ",
+    "productNameEn": "Nombre del Producto (Inglés)",
+    "descriptionEn": "Descripción (Inglés)",
+    "editingProduct": "Editando: {name}",
+    "ifEmptyFallback": "Si se deja vacío, se usará la versión en inglés como respaldo.",
+    "seoCharsOf60": "{count}/60 caracteres",
+    "seoCharsOf160": "{count}/160 caracteres"
   },
   "search": {
     "placeholder": "Buscar productos...",
     "noResults": "No se encontraron productos para",
     "results": "resultados para"
+  },
+  "shop": {
+    "title": "Tienda",
+    "productSingular": "producto",
+    "productPlural": "productos",
+    "filters": "Filtros",
+    "sortNewest": "Más recientes",
+    "sortPriceLow": "Precio: Menor a mayor",
+    "sortPriceHigh": "Precio: Mayor a menor",
+    "all": "Todos",
+    "categoriesLabel": "Categorías"
   },
   "common": {
     "loading": "Cargando...",

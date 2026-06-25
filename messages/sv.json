@@ -23,7 +23,10 @@
     "subtitle": "Upptäck vår exklusiva kollektion av premiummodestycker skapade för den moderna kvinnan som uppskattar kvalitet och sofistikering.",
     "cta": "Handla Nu",
     "ctaSecondary": "Se Kollektion",
-    "scrollDown": "Scrolla för att utforska"
+    "scrollDown": "Scrolla för att utforska",
+    "statsProducts": "Produkter",
+    "statsBrands": "Varumärken",
+    "statsRated": "Betygsatt"
   },
   "featured": {
     "title": "Utvald Kollektion",
@@ -33,7 +36,8 @@
   "categories": {
     "title": "Handla efter Kategori",
     "subtitle": "Hitta exakt vad du letar efter",
-    "viewAll": "Se Alla"
+    "viewAll": "Se Alla",
+    "items": "varor"
   },
   "product": {
     "addToCart": "Lägg i Varukorg",
@@ -48,7 +52,11 @@
     "shareProduct": "Dela",
     "price": "Pris",
     "free_shipping": "Gratis Frakt",
-    "quantity": "Antal"
+    "quantity": "Antal",
+    "added": "Tillagd!",
+    "easyReturns": "Enkel Retur",
+    "securePayment": "Säker Betalning",
+    "premiumQuality": "Premiumkvalitet"
   },
   "cart": {
     "title": "Varukorg",
@@ -64,7 +72,9 @@
   },
   "whatsapp": {
     "message": "Hej! Jag vill beställa:\n\n{items}\n\nTotalt: {total}\n\nVänligen bekräfta tillgänglighet.",
-    "button": "Beställ på WhatsApp"
+    "button": "Beställ på WhatsApp",
+    "readyTitle": "Redo att Beställa?",
+    "readyDesc": "Kontakta oss direkt på WhatsApp för en personlig shoppingupplevelse, anpassade beställningar och exklusiva erbjudanden."
   },
   "footer": {
     "tagline": "Premium mode för den moderna kvinnan",
@@ -78,7 +88,13 @@
     "emailPlaceholder": "Din e-postadress",
     "rights": "Alla rättigheter förbehållna",
     "privacy": "Integritetspolicy",
-    "terms": "Användarvillkor"
+    "terms": "Användarvillkor",
+    "madeWith": "Skapad med"
+  },
+  "notFound": {
+    "title": "Sidan Hittades Inte",
+    "description": "Sidan du letar efter finns inte.",
+    "backHome": "Tillbaka till Hem"
   },
   "admin": {
     "dashboard": "Kontrollpanel",
@@ -112,12 +128,91 @@
     "loginButton": "Logga In",
     "totalProducts": "Totala Produkter",
     "totalCategories": "Totala Kategorier",
-    "recentProducts": "Senaste Produkter"
+    "recentProducts": "Senaste Produkter",
+    "adminPanel": "Adminpanel",
+    "signOut": "Logga ut",
+    "welcomeBack": "Välkommen tillbaka, Admin",
+    "addNewProduct": "Lägg till Ny Produkt",
+    "uploadSubtitle": "Ladda upp med bilder och storlekar",
+    "manageCategories": "Hantera Kategorier",
+    "organizeProducts": "Organisera dina produkter",
+    "noProductsYet": "Inga produkter ännu",
+    "addFirstProduct": "Lägg till din första produkt →",
+    "viewAll": "Se alla",
+    "searchProducts": "Sök efter produkter...",
+    "noProductsFound": "Inga produkter hittades",
+    "addCategory": "Lägg till Kategori",
+    "newCategory": "Ny Kategori",
+    "create": "Skapa",
+    "noCategoriesYet": "Inga kategorier ännu",
+    "createFirstCategory": "Skapa din första kategori →",
+    "deleteCategoryConfirm": "Ta bort denna kategori? Produkter i den blir okategoriserade.",
+    "invalidCredentials": "Ogiltiga uppgifter. Försök igen.",
+    "signingIn": "Loggar in...",
+    "adminDashboard": "Adminkontrollpanel",
+    "secureAccess": "Adminpanel · Endast säker åtkomst",
+    "whatsappNumber": "WhatsApp-nummer",
+    "configureInEnv": "Konfigurera i .env.local-filen",
+    "adminEmail": "Admin E-post",
+    "productCount": "{count} produkter totalt",
+    "categoriesCount": "{count} kategorier",
+    "noSizes": "Inga storlekar",
+    "colProduct": "Produkt",
+    "colCategory": "Kategori",
+    "colPrice": "Pris",
+    "colStatus": "Status",
+    "colActions": "Åtgärder",
+    "outOfStock": "Slutsåld",
+    "optional": "Valfritt",
+    "fillDetails": "Fyll i produktdetaljer",
+    "tabBasicInfo": "Grundläggande Info",
+    "tabLanguages": "Språk",
+    "tabImages": "Bilder",
+    "tabSizes": "Storlekar",
+    "tabSeo": "SEO",
+    "dropImages": "Släpp bilder här",
+    "imageFormats": "PNG, JPG, WebP upp till 10MB vardera",
+    "browseFiles": "Bläddra bland Filer",
+    "uploading": "Laddar upp...",
+    "mainImage": "Huvud",
+    "addSizeHint": "Lägg till tillgängliga storlekar och lagerkvantiteter.",
+    "sizePlaceholder": "Storlek (t.ex. S, M, L, XL, UK8)",
+    "quickAdd": "Snabb tillägg:",
+    "seoHint": "Optimera för sökmotorer. Dessa åsidosätter standardproduktnamn/beskrivning.",
+    "seoTitleLabel": "SEO-titel (Engelska)",
+    "seoDescLabel": "SEO-beskrivning (Engelska)",
+    "googlePreview": "Google Förhandsvisning",
+    "noDescription": "Ingen beskrivning angiven.",
+    "saving": "Sparar...",
+    "updateProduct": "Uppdatera Produkt",
+    "createProduct": "Skapa Produkt",
+    "failedToSave": "Kunde inte spara",
+    "noCategoriesLink": "Inga kategorier ännu.",
+    "createOneFirst": "Skapa en först.",
+    "selectCategory": "Välj en kategori...",
+    "uploadError": "Uppladdningsfel: ",
+    "productNameEn": "Produktnamn (Engelska)",
+    "descriptionEn": "Beskrivning (Engelska)",
+    "editingProduct": "Redigerar: {name}",
+    "ifEmptyFallback": "Om tom används den engelska versionen som reserv.",
+    "seoCharsOf60": "{count}/60 tecken",
+    "seoCharsOf160": "{count}/160 tecken"
   },
   "search": {
     "placeholder": "Sök efter produkter...",
     "noResults": "Inga produkter hittades för",
     "results": "resultat för"
+  },
+  "shop": {
+    "title": "Butik",
+    "productSingular": "produkt",
+    "productPlural": "produkter",
+    "filters": "Filter",
+    "sortNewest": "Nyaste",
+    "sortPriceLow": "Pris: Låg till hög",
+    "sortPriceHigh": "Pris: Hög till låg",
+    "all": "Alla",
+    "categoriesLabel": "Kategorier"
   },
   "common": {
     "loading": "Laddar...",
