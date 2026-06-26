@@ -42,6 +42,7 @@
   "product": {
     "addToCart": "Add to Cart",
     "buyNow": "Buy via WhatsApp",
+    "buyEmail": "Order via Email",
     "selectSize": "Select Size",
     "size": "Size",
     "inStock": "In Stock",
@@ -56,7 +57,8 @@
     "added": "Added!",
     "easyReturns": "Easy Returns",
     "securePayment": "Secure Payment",
-    "premiumQuality": "Premium Quality"
+    "premiumQuality": "Premium Quality",
+    "deliveryFee": "delivery"
   },
   "cart": {
     "title": "Shopping Cart",
@@ -65,7 +67,9 @@
     "continueShopping": "Continue Shopping",
     "total": "Total",
     "subtotal": "Subtotal",
+    "delivery": "Delivery",
     "checkout": "Checkout via WhatsApp",
+    "checkoutEmail": "Order via Email",
     "remove": "Remove",
     "items": "items",
     "item": "item"
@@ -156,6 +160,8 @@
     "adminEmail": "Admin Email",
     "productCount": "{count} total products",
     "categoriesCount": "{count} categories",
+    "oldPrice": "Old Price (before discount)",
+    "oldPriceHint": "If set and higher than current price, a discount badge will be shown.",
     "noSizes": "No sizes",
     "colProduct": "Product",
     "colCategory": "Category",

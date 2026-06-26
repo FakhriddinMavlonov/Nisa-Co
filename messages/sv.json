@@ -42,6 +42,7 @@
   "product": {
     "addToCart": "Lägg i Varukorg",
     "buyNow": "Köp via WhatsApp",
+    "buyEmail": "Beställ via E-post",
     "selectSize": "Välj Storlek",
     "size": "Storlek",
     "inStock": "I Lager",
@@ -56,7 +57,8 @@
     "added": "Tillagd!",
     "easyReturns": "Enkel Retur",
     "securePayment": "Säker Betalning",
-    "premiumQuality": "Premiumkvalitet"
+    "premiumQuality": "Premiumkvalitet",
+    "deliveryFee": "leverans"
   },
   "cart": {
     "title": "Varukorg",
@@ -65,7 +67,9 @@
     "continueShopping": "Fortsätt Handla",
     "total": "Totalt",
     "subtotal": "Delsumma",
+    "delivery": "Leverans",
     "checkout": "Betala via WhatsApp",
+    "checkoutEmail": "Beställ via E-post",
     "remove": "Ta bort",
     "items": "varor",
     "item": "vara"
@@ -156,6 +160,8 @@
     "adminEmail": "Admin E-post",
     "productCount": "{count} produkter totalt",
     "categoriesCount": "{count} kategorier",
+    "oldPrice": "Gammalt pris (före rabatt)",
+    "oldPriceHint": "Om inställt och högre än nuvarande pris visas ett rabattmärke.",
     "noSizes": "Inga storlekar",
     "colProduct": "Produkt",
     "colCategory": "Kategori",

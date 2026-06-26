@@ -74,6 +74,7 @@ export async function PUT(
       descriptionSv: body.descriptionSv,
       descriptionEs: body.descriptionEs,
       price: body.price !== undefined ? parseFloat(body.price) : undefined,
+      oldPrice: body.oldPrice !== undefined ? (body.oldPrice ? parseFloat(body.oldPrice) : null) : undefined,
       currency: body.currency,
       categoryId: body.categoryId,
       featured: body.featured,

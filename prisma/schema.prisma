@@ -37,6 +37,7 @@ model Product {
   descriptionSv String
   descriptionEs String
   price        Float
+  oldPrice     Float?
   currency     String         @default("GBP")
   categoryId   String
   category     Category       @relation(fields: [categoryId], references: [id])

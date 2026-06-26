@@ -3,7 +3,7 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { motion } from "framer-motion";
-import { Instagram, Facebook, Heart } from "lucide-react";
+import { Instagram, Heart, Mail } from "lucide-react";
 
 export function Footer() {
   const t = useTranslations("footer");
@@ -25,20 +25,36 @@ export function Footer() {
               {t("tagline")}
             </p>
             <div className="flex gap-4">
-              {[
-                { icon: Instagram, href: "#", label: "Instagram" },
-                { icon: Facebook, href: "#", label: "Facebook" },
-              ].map(({ icon: Icon, href, label }) => (
-                <motion.a
-                  key={label}
-                  href={href}
-                  whileHover={{ scale: 1.1, y: -2 }}
-                  className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-white hover:bg-brand-600 transition-colors"
-                  aria-label={label}
-                >
-                  <Icon className="w-4 h-4" />
-                </motion.a>
-              ))}
+              <motion.a
+                href="https://www.instagram.com/nisa.co.uk?utm_source=qr"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.1, y: -2 }}
+                className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-white hover:bg-brand-600 transition-colors"
+                aria-label="Instagram"
+              >
+                <Instagram className="w-4 h-4" />
+              </motion.a>
+              <motion.a
+                href="https://t.me/nisacouk"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.1, y: -2 }}
+                className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-white hover:bg-brand-600 transition-colors"
+                aria-label="Telegram"
+              >
+                <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current">
+                  <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+                </svg>
+              </motion.a>
+              <motion.a
+                href="mailto:Munisadolieva0@gmail.com"
+                whileHover={{ scale: 1.1, y: -2 }}
+                className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-white hover:bg-brand-600 transition-colors"
+                aria-label="Email"
+              >
+                <Mail className="w-4 h-4" />
+              </motion.a>
             </div>
           </div>
 
@@ -77,7 +93,25 @@ export function Footer() {
                   rel="noopener noreferrer"
                   className="hover:text-brand-400 transition-colors"
                 >
-                  WhatsApp: +998 97 612 58 60
+                  WhatsApp: +44 7775 777313
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://t.me/nisacouk"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-brand-400 transition-colors"
+                >
+                  Telegram: @nisacouk
+                </a>
+              </li>
+              <li>
+                <a
+                  href="mailto:Munisadolieva0@gmail.com"
+                  className="hover:text-brand-400 transition-colors"
+                >
+                  Munisadolieva0@gmail.com
                 </a>
               </li>
             </ul>

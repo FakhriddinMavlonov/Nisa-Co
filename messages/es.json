@@ -42,6 +42,7 @@
   "product": {
     "addToCart": "Añadir al Carrito",
     "buyNow": "Comprar por WhatsApp",
+    "buyEmail": "Pedir por Email",
     "selectSize": "Seleccionar Talla",
     "size": "Talla",
     "inStock": "En Stock",
@@ -56,7 +57,8 @@
     "added": "¡Añadido!",
     "easyReturns": "Devoluciones Fáciles",
     "securePayment": "Pago Seguro",
-    "premiumQuality": "Calidad Premium"
+    "premiumQuality": "Calidad Premium",
+    "deliveryFee": "envío"
   },
   "cart": {
     "title": "Carrito de Compras",
@@ -65,7 +67,9 @@
     "continueShopping": "Continuar Comprando",
     "total": "Total",
     "subtotal": "Subtotal",
+    "delivery": "Envío",
     "checkout": "Pagar por WhatsApp",
+    "checkoutEmail": "Pedir por Email",
     "remove": "Eliminar",
     "items": "artículos",
     "item": "artículo"
@@ -156,6 +160,8 @@
     "adminEmail": "Correo del Admin",
     "productCount": "{count} productos en total",
     "categoriesCount": "{count} categorías",
+    "oldPrice": "Precio anterior (antes del descuento)",
+    "oldPriceHint": "Si se establece y es mayor al precio actual, se mostrará una insignia de descuento.",
     "noSizes": "Sin tallas",
     "colProduct": "Producto",
     "colCategory": "Categoría",

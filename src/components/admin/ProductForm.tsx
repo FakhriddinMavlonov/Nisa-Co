@@ -50,6 +50,7 @@ interface Product {
   descriptionSv: string;
   descriptionEs: string;
   price: number;
+  oldPrice?: number | null;
   currency: string;
   categoryId: string;
   featured: boolean;
@@ -96,6 +97,7 @@ export function ProductForm({ product, categories }: ProductFormProps) {
   const [descSv, setDescSv] = useState(product?.descriptionSv || "");
   const [descEs, setDescEs] = useState(product?.descriptionEs || "");
   const [price, setPrice] = useState(product?.price?.toString() || "");
+  const [oldPrice, setOldPrice] = useState(product?.oldPrice?.toString() || "");
   const [currency, setCurrency] = useState(product?.currency || "GBP");
   const [categoryId, setCategoryId] = useState(product?.categoryId || "");
   const [featured, setFeatured] = useState(product?.featured || false);
@@ -164,7 +166,7 @@ export function ProductForm({ product, categories }: ProductFormProps) {
       nameEn, nameUz, nameNo, nameSv, nameEs,
       descriptionEn: descEn, descriptionUz: descUz, descriptionNo: descNo,
       descriptionSv: descSv, descriptionEs: descEs,
-      price, currency, categoryId, featured, inStock,
+      price, oldPrice: oldPrice || null, currency, categoryId, featured, inStock,
       images, sizes,
       seoTitleEn, seoDescEn,
     };
@@ -291,6 +293,21 @@ export function ProductForm({ product, categories }: ProductFormProps) {
                     </select>
                   </div>
                   {errors.price && <p className="text-red-400 text-xs mt-1">{errors.price}</p>}
+                  <div className="mt-3">
+                    <label className="block text-xs font-medium text-gray-400 mb-1">
+                      {t("oldPrice")} <span className="text-gray-500">({t("optional")})</span>
+                    </label>
+                    <input
+                      type="number"
+                      value={oldPrice}
+                      onChange={(e) => setOldPrice(e.target.value)}
+                      placeholder="0.00"
+                      min="0"
+                      step="0.01"
+                      className="w-full px-4 py-2.5 bg-gray-800 border border-white/10 rounded-xl text-white placeholder-gray-600 focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 text-sm"
+                    />
+                    <p className="text-gray-500 text-xs mt-1">{t("oldPriceHint")}</p>
+                  </div>
                 </div>
               </div>
 

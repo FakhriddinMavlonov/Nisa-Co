@@ -39,6 +39,7 @@ export interface Product {
   descriptionSv: string;
   descriptionEs: string;
   price: number;
+  oldPrice?: number | null;
   currency: string;
   categoryId: string;
   category: Category;

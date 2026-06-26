@@ -4,13 +4,14 @@ import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import { ShoppingBag, MessageCircle, Share2, ChevronLeft, ChevronRight, Star } from "lucide-react";
+import { ShoppingBag, MessageCircle, Share2, ChevronLeft, ChevronRight, Star, Mail } from "lucide-react";
 import { Product } from "@/types";
 import type { Locale } from "@/types";
-import { formatPrice, getLocalizedField, buildWhatsAppUrl, buildWhatsAppMessage } from "@/lib/utils";
+import { formatPrice, getLocalizedField, buildWhatsAppUrl, buildWhatsAppMessage, buildEmailBody, DELIVERY_FEE } from "@/lib/utils";
 import { useCartContext } from "@/context/CartContext";
 import { ProductGrid } from "./ProductGrid";
 import { cn } from "@/lib/utils";
+import { EmailOrderModal } from "@/components/EmailOrderModal";
 
 interface ProductDetailClientProps {
   product: Product;
@@ -25,6 +26,7 @@ export function ProductDetailClient({ product, relatedProducts, locale }: Produc
   const [selectedSize, setSelectedSize] = useState<string | undefined>();
   const [imageIndex, setImageIndex] = useState(0);
   const [addedToCart, setAddedToCart] = useState(false);
+  const [emailModalOpen, setEmailModalOpen] = useState(false);
 
   const name = getLocalizedField(product, "name", locale as Locale);
   const description = getLocalizedField(product, "description", locale as Locale);
@@ -50,6 +52,17 @@ export function ProductDetailClient({ product, relatedProducts, locale }: Produc
     const url = buildWhatsAppUrl("+447775777313", message);
     window.open(url, "_blank");
   };
+
+  const emailBody = buildEmailBody(
+    [{ name, size: selectedSize, quantity: 1, price: product.price }],
+    product.price,
+    product.currency
+  );
+
+  const discount =
+    product.oldPrice && product.oldPrice > product.price
+      ? Math.round(((product.oldPrice - product.price) / product.oldPrice) * 100)
+      : null;
 
   const handleShare = () => {
     if (navigator.share) {
@@ -160,11 +173,24 @@ export function ProductDetailClient({ product, relatedProducts, locale }: Produc
             </div>
 
             {/* Price */}
-            <div className="flex items-baseline gap-3">
+            <div className="flex items-center gap-3 flex-wrap">
               <span className="text-3xl font-bold text-brand-600">
                 {formatPrice(product.price, product.currency)}
               </span>
+              {product.oldPrice && product.oldPrice > product.price && (
+                <>
+                  <span className="text-xl text-gray-400 line-through">
+                    {formatPrice(product.oldPrice, product.currency)}
+                  </span>
+                  <span className="bg-red-100 text-red-600 text-sm font-semibold px-2.5 py-1 rounded-full">
+                    -{discount}%
+                  </span>
+                </>
+              )}
             </div>
+            <p className="text-xs text-gray-500">
+              + {formatPrice(DELIVERY_FEE)} {t("deliveryFee")}
+            </p>
 
             {/* Description */}
             <p className="text-gray-600 leading-relaxed">{description}</p>
@@ -214,12 +240,12 @@ export function ProductDetailClient({ product, relatedProducts, locale }: Produc
             </div>
 
             {/* Actions */}
-            <div className="flex flex-col sm:flex-row gap-3 pt-2">
+            <div className="flex flex-col gap-3 pt-2">
               <button
                 onClick={handleAddToCart}
                 disabled={!product.inStock}
                 className={cn(
-                  "flex-1 py-4 rounded-2xl font-semibold flex items-center justify-center gap-2 transition-all text-sm",
+                  "w-full py-4 rounded-2xl font-semibold flex items-center justify-center gap-2 transition-all text-sm",
                   addedToCart
                     ? "bg-green-500 text-white"
                     : "bg-gray-900 hover:bg-gray-800 text-white",
@@ -230,13 +256,22 @@ export function ProductDetailClient({ product, relatedProducts, locale }: Produc
                 {addedToCart ? t("added") : t("addToCart")}
               </button>
 
-              <button
-                onClick={handleBuyWhatsApp}
-                className="flex-1 py-4 rounded-2xl font-semibold flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20BA5A] text-white transition-colors text-sm shadow-lg shadow-green-200"
-              >
-                <MessageCircle className="w-4 h-4" />
-                {t("buyNow")}
-              </button>
+              <div className="flex gap-3">
+                <button
+                  onClick={handleBuyWhatsApp}
+                  className="flex-1 py-3.5 rounded-2xl font-semibold flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20BA5A] text-white transition-colors text-sm shadow-lg shadow-green-200"
+                >
+                  <MessageCircle className="w-4 h-4" />
+                  {t("buyNow")}
+                </button>
+                <button
+                  onClick={() => setEmailModalOpen(true)}
+                  className="flex-1 py-3.5 rounded-2xl font-semibold flex items-center justify-center gap-2 bg-gray-100 hover:bg-gray-200 text-gray-800 transition-colors text-sm"
+                >
+                  <Mail className="w-4 h-4" />
+                  {t("buyEmail")}
+                </button>
+              </div>
             </div>
 
             <button
@@ -271,6 +306,14 @@ export function ProductDetailClient({ product, relatedProducts, locale }: Produc
           </div>
         )}
       </div>
+
+      <EmailOrderModal
+        isOpen={emailModalOpen}
+        onClose={() => setEmailModalOpen(false)}
+        toEmail="Munisadolieva0@gmail.com"
+        subject={`Order: ${name}`}
+        body={emailBody}
+      />
     </div>
   );
 }

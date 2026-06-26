@@ -42,6 +42,7 @@
   "product": {
     "addToCart": "Savatga Qo'shish",
     "buyNow": "WhatsApp orqali Sotib Olish",
+    "buyEmail": "Email orqali Buyurtma",
     "selectSize": "O'lchamni Tanlang",
     "size": "O'lcham",
     "inStock": "Mavjud",
@@ -56,7 +57,8 @@
     "added": "Qo'shildi!",
     "easyReturns": "Oson Qaytarish",
     "securePayment": "Xavfsiz To'lov",
-    "premiumQuality": "Premium Sifat"
+    "premiumQuality": "Premium Sifat",
+    "deliveryFee": "yetkazib berish"
   },
   "cart": {
     "title": "Xarid Savati",
@@ -65,7 +67,9 @@
     "continueShopping": "Xarid Qilishni Davom Ettirish",
     "total": "Jami",
     "subtotal": "Oraliq Jami",
+    "delivery": "Yetkazib berish",
     "checkout": "WhatsApp orqali To'lash",
+    "checkoutEmail": "Email orqali Buyurtma",
     "remove": "O'chirish",
     "items": "mahsulot",
     "item": "mahsulot"
@@ -156,6 +160,8 @@
     "adminEmail": "Admin Email",
     "productCount": "{count} ta mahsulot",
     "categoriesCount": "{count} ta kategoriya",
+    "oldPrice": "Eski Narx (chegirmadan oldingi)",
+    "oldPriceHint": "Agar joriy narxdan yuqori bo'lsa, chegirma belgisi ko'rsatiladi.",
     "noSizes": "O'lchamlar yo'q",
     "colProduct": "Mahsulot",
     "colCategory": "Kategoriya",

@@ -78,7 +78,12 @@ export function ProductCard({ product, index = 0 }: ProductCardProps) {
 
           {/* Badges */}
           <div className="absolute top-3 left-3 flex flex-col gap-1.5">
-            {product.featured && (
+            {product.oldPrice && product.oldPrice > product.price && (
+              <span className="bg-red-500 text-white text-xs font-semibold px-2.5 py-1 rounded-full shadow-sm">
+                -{Math.round(((product.oldPrice - product.price) / product.oldPrice) * 100)}%
+              </span>
+            )}
+            {product.featured && !product.oldPrice && (
               <span className="bg-gold-400 text-white text-xs font-semibold px-2.5 py-1 rounded-full shadow-sm">
                 ✦ {tCommon("new")}
               </span>
@@ -141,9 +146,16 @@ export function ProductCard({ product, index = 0 }: ProductCardProps) {
           </h3>
 
           <div className="flex items-center justify-between">
-            <span className="text-brand-600 font-bold">
-              {formatPrice(product.price, product.currency)}
-            </span>
+            <div className="flex items-center gap-1.5 flex-wrap">
+              <span className="text-brand-600 font-bold">
+                {formatPrice(product.price, product.currency)}
+              </span>
+              {product.oldPrice && product.oldPrice > product.price && (
+                <span className="text-gray-400 text-xs line-through">
+                  {formatPrice(product.oldPrice, product.currency)}
+                </span>
+              )}
+            </div>
             {product.sizes.length > 0 && (
               <div className="flex gap-1">
                 {product.sizes.slice(0, 3).map((size) => (

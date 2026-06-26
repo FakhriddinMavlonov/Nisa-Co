@@ -66,6 +66,7 @@ export async function POST(request: NextRequest) {
       descriptionSv: body.descriptionSv || body.descriptionEn || "",
       descriptionEs: body.descriptionEs || body.descriptionEn || "",
       price: parseFloat(body.price),
+      oldPrice: body.oldPrice ? parseFloat(body.oldPrice) : null,
       currency: body.currency || "GBP",
       categoryId: body.categoryId,
       featured: body.featured || false,

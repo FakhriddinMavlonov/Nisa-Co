@@ -5,6 +5,8 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
+export const DELIVERY_FEE = 3.9;
+
 export function formatPrice(price: number, currency = "GBP"): string {
   return new Intl.NumberFormat("en-GB", {
     style: "currency",
@@ -38,7 +40,7 @@ export function buildWhatsAppUrl(
 
 export function buildWhatsAppMessage(
   items: Array<{ name: string; size?: string; quantity: number; price: number }>,
-  total: number,
+  subtotal: number,
   currency = "GBP"
 ): string {
   const itemsText = items
@@ -48,8 +50,30 @@ export function buildWhatsAppMessage(
     )
     .join("\n");
 
-  return `Hello! I would like to order:\n\n${itemsText}\n\nTotal: ${formatPrice(total, currency)}\n\nPlease confirm availability.`;
+  const delivery = formatPrice(DELIVERY_FEE, currency);
+  const grandTotal = formatPrice(subtotal + DELIVERY_FEE, currency);
+
+  return `Hello! I would like to order:\n\n${itemsText}\n\nSubtotal: ${formatPrice(subtotal, currency)}\nDelivery: ${delivery}\nTotal: ${grandTotal}\n\nPlease confirm availability.`;
 }
+
+export function buildEmailBody(
+  items: Array<{ name: string; size?: string; quantity: number; price: number }>,
+  subtotal: number,
+  currency = "GBP"
+): string {
+  const itemsText = items
+    .map(
+      (item) =>
+        `- ${item.name}${item.size ? ` (${item.size})` : ""} x${item.quantity}: ${formatPrice(item.price * item.quantity, currency)}`
+    )
+    .join("\n");
+
+  const delivery = formatPrice(DELIVERY_FEE, currency);
+  const grandTotal = formatPrice(subtotal + DELIVERY_FEE, currency);
+
+  return `Hello! I would like to order:\n\n${itemsText}\n\nSubtotal: ${formatPrice(subtotal, currency)}\nDelivery: ${delivery}\nTotal: ${grandTotal}\n\nPlease confirm availability.`;
+}
+
 
 export type Locale = "en" | "uz" | "no" | "sv" | "es";
 
